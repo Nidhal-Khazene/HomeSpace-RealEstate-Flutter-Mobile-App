@@ -14,7 +14,7 @@ class HomeSpace extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoutes,
-      initialRoute: SplashView.nameRoute,
+      initialRoute: SplashView.routeName,
     );
   }
 }
