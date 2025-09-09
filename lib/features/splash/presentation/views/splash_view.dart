@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:home_space/core/utils/assets.dart';
+import 'package:home_space/core/utils/colors.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
@@ -7,6 +9,9 @@ class SplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: Placeholder());
+    return Scaffold(
+      backgroundColor: ColorsData.kPrimaryColor,
+      body: Center(child: Image.asset(Assets.assetsImagesSplashLogo)),
+    );
   }
 }
