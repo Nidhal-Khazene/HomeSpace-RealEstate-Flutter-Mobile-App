@@ -83,6 +83,12 @@ flutter:
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
+  fonts:
+     - family: GT-Walsheim
+       fonts:
+         - asset: assets/fonts/GT-Walsheim-Regular-Trial-BF651b7fc71a47d.otf
+
+
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
 flutter_assets:

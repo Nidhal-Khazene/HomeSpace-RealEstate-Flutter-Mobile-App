@@ -51,7 +51,7 @@ class OnBoardingViewBody extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 48),
-          const CustomButton(),
+          const CustomButton(colorBackground: Color(0xff4360f6)),
         ],
       ),
     );
