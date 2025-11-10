@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:home_space/core/utils/colors.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
+  const CustomButton({super.key, this.colorBackground});
+  final Color? colorBackground;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class CustomButton extends StatelessWidget {
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(100),
-          color: ColorsData.kPrimaryColor,
+          color: colorBackground ?? ColorsData.kPrimaryColor,
         ),
         child: const Text(
           'Get Started',
