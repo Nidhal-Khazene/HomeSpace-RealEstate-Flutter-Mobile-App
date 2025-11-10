@@ -12,7 +12,7 @@ class SplashViewBody extends StatefulWidget {
 class _SplashViewBodyState extends State<SplashViewBody>
     with SingleTickerProviderStateMixin {
   late AnimationController animationController;
-  late Animation slidingAnimation;
+  late Animation<Offset> slidingAnimation;
 
   @override
   void initState() {
@@ -22,12 +22,18 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return SlidingLogo();
+    return SlidingLogo(slidingAnimation: slidingAnimation);
   }
 
   void executeNavigation() {
-    Future.delayed(const Duration(seconds: 4), () {
+    Future.delayed(const Duration(seconds: 3), () {
       Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
     });
   }
@@ -35,7 +41,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initSlidingAnimation() {
     animationController = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 1),
+      duration: const Duration(seconds: 2),
     );
     slidingAnimation = Tween<Offset>(
       begin: const Offset(0, 2),
