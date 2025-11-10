@@ -33,7 +33,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void executeNavigation() {
-    Future.delayed(const Duration(seconds: 4), () {
+    Future.delayed(const Duration(seconds: 2), () {
       Navigator.pushReplacementNamed(context, OnBoardingView.routeName);
     });
   }
@@ -41,7 +41,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   void initSlidingAnimation() {
     animationController = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 2),
+      duration: const Duration(milliseconds: 500),
     );
     slidingAnimation = Tween<Offset>(
       begin: const Offset(0, 2),
