@@ -87,6 +87,8 @@ flutter:
      - family: GT-Walsheim
        fonts:
          - asset: assets/fonts/GT-Walsheim-Regular-Trial-BF651b7fc71a47d.otf
+         - asset: assets/fonts/GT-Walsheim-Medium-Trial-BF651b7fc728fb3.otf
+           weight: 500
 
 
   # For details regarding fonts from package dependencies,
