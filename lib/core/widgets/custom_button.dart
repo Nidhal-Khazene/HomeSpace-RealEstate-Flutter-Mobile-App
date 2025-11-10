@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_space/core/utils/colors.dart';
+import 'package:home_space/core/utils/styles.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key, this.colorBackground});
@@ -16,17 +17,10 @@ class CustomButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(100),
           color: colorBackground ?? ColorsData.kPrimaryColor,
         ),
-        child: const Text(
+        child: Text(
           'Get Started',
           textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white /* White-100 */,
-            fontSize: 16,
-            fontFamily: 'GT Walsheim Pro',
-            fontWeight: FontWeight.w400,
-            height: 1.67,
-            letterSpacing: -0.50,
-          ),
+          style: AppStyles.regular16.copyWith(color: Colors.white),
         ),
       ),
     );
