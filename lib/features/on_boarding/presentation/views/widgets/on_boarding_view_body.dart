@@ -48,7 +48,10 @@ class OnBoardingViewBody extends StatelessWidget {
             onTap: () {
               Navigator.pushReplacementNamed(context, LoginView.routeName);
             },
-            child: const CustomButton(colorBackground: Color(0xff4360f6)),
+            child: const CustomButton(
+              textContent: 'Get Started',
+              colorBackground: Color(0xff4360f6),
+            ),
           ),
         ],
       ),
