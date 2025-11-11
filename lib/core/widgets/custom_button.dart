@@ -13,20 +13,17 @@ class CustomButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 23),
-      child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 16),
-        width: double.infinity,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(100),
-          color: colorBackground ?? ColorsData.kPrimaryColor,
-        ),
-        child: Text(
-          textContent,
-          textAlign: TextAlign.center,
-          style: AppStyles.regular16.copyWith(color: Colors.white),
-        ),
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 16),
+      width: double.infinity,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(100),
+        color: colorBackground ?? ColorsData.kPrimaryColor,
+      ),
+      child: Text(
+        textContent,
+        textAlign: TextAlign.center,
+        style: AppStyles.regular16.copyWith(color: Colors.white),
       ),
     );
   }
