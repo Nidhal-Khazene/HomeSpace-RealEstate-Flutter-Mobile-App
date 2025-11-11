@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:home_space/core/utils/assets.dart';
 import 'package:home_space/core/utils/styles.dart';
 import 'package:home_space/core/widgets/custom_button.dart';
+import 'package:home_space/features/auth/presentation/views/login_view.dart';
 
 class OnBoardingViewBody extends StatelessWidget {
   const OnBoardingViewBody({super.key});
@@ -28,9 +29,7 @@ class OnBoardingViewBody extends StatelessWidget {
             child: Text(
               'Discover your dream home',
               textAlign: TextAlign.center,
-              style: AppStyles.medium32.copyWith(
-                color: const Color(0xFF1F1F1F),
-              ),
+              style: AppStyles.medium32,
             ),
           ),
           const SizedBox(height: 18),
@@ -45,7 +44,12 @@ class OnBoardingViewBody extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 48),
-          const CustomButton(colorBackground: Color(0xff4360f6)),
+          GestureDetector(
+            onTap: () {
+              Navigator.pushReplacementNamed(context, LoginView.routeName);
+            },
+            child: const CustomButton(colorBackground: Color(0xff4360f6)),
+          ),
         ],
       ),
     );
