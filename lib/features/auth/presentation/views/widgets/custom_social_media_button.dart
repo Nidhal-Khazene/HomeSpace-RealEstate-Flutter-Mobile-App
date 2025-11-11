@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:home_space/core/utils/styles.dart';
 
 class CustomSocialMediaButton extends StatelessWidget {
@@ -15,7 +14,7 @@ class CustomSocialMediaButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.symmetric(horizontal: 48.60, vertical: 11),
+      height: 49,
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
@@ -25,7 +24,8 @@ class CustomSocialMediaButton extends StatelessWidget {
       ),
       child: Row(
         children: [
-          SvgPicture.asset(socialIcon),
+          const SizedBox(width: 17.42),
+          Image.asset(socialIcon, width: 24, height: 24),
           const SizedBox(width: 54.08),
           Text(textContent, style: AppStyles.medium16),
         ],
