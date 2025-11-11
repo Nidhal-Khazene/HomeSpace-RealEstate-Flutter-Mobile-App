@@ -3,8 +3,13 @@ import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/core/utils/styles.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, this.colorBackground});
+  const CustomButton({
+    super.key,
+    this.colorBackground,
+    required this.textContent,
+  });
   final Color? colorBackground;
+  final String textContent;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +23,7 @@ class CustomButton extends StatelessWidget {
           color: colorBackground ?? ColorsData.kPrimaryColor,
         ),
         child: Text(
-          'Get Started',
+          textContent,
           textAlign: TextAlign.center,
           style: AppStyles.regular16.copyWith(color: Colors.white),
         ),
