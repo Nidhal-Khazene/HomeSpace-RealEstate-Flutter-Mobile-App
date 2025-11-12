@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:home_space/core/utils/styles.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({super.key, required this.textContent});
+  const CustomTextField({
+    super.key,
+    required this.textContent,
+    this.textContentColor,
+  });
   final String textContent;
+  final Color? textContentColor;
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +16,9 @@ class CustomTextField extends StatelessWidget {
       keyboardType: TextInputType.emailAddress,
       decoration: InputDecoration(
         hintText: textContent,
-        hintStyle: AppStyles.regular16.copyWith(color: const Color(0xFF8C8B8B)),
+        hintStyle: AppStyles.regular16.copyWith(
+          color: textContentColor ?? const Color(0xFF8C8B8B),
+        ),
         enabledBorder: buildOutlineInputBorder(),
         focusedBorder: buildOutlineInputBorder(),
         disabledBorder: buildOutlineInputBorder(),
