@@ -7,9 +7,13 @@ class CustomButton extends StatelessWidget {
     super.key,
     this.colorBackground,
     required this.textContent,
+    this.textContentColor,
+    this.borderColor,
   });
   final Color? colorBackground;
   final String textContent;
+  final Color? textContentColor;
+  final Color? borderColor;
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +21,16 @@ class CustomButton extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 16),
       width: double.infinity,
       decoration: BoxDecoration(
+        border: Border.all(color: borderColor ?? ColorsData.kPrimaryColor),
         borderRadius: BorderRadius.circular(100),
         color: colorBackground ?? ColorsData.kPrimaryColor,
       ),
       child: Text(
         textContent,
         textAlign: TextAlign.center,
-        style: AppStyles.regular16.copyWith(color: Colors.white),
+        style: AppStyles.regular16.copyWith(
+          color: textContentColor ?? Colors.white,
+        ),
       ),
     );
   }
