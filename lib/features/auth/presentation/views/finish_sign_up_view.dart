@@ -8,6 +8,6 @@ class FinishSignUpView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: FinishSignUpViewBody());
+    return const Scaffold(body: SafeArea(child: FinishSignUpViewBody()));
   }
 }
