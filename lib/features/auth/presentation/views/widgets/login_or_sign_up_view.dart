@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_space/features/auth/presentation/views/widgets/login_or_sign_up_password.dart';
 
 import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/styles.dart';
@@ -17,11 +18,19 @@ class LoginOrSignUpView extends StatelessWidget {
         const SizedBox(height: 70),
         Text('Login or Signup', style: AppStyles.medium32),
         const SizedBox(height: 33),
-        const CustomTextField(),
+        const CustomTextField(textContent: "Email Address"),
         const SizedBox(height: 12),
-        const CustomButton(
-          textContent: "Continue",
-          colorBackground: Color(0xff4460F6),
+        GestureDetector(
+          onTap: () {
+            Navigator.pushReplacementNamed(
+              context,
+              LoginOrSignUpPassword.routeName,
+            );
+          },
+          child: const CustomButton(
+            textContent: "Continue",
+            colorBackground: Color(0xff4460F6),
+          ),
         ),
         const SizedBox(height: 95),
         const CustomSocialMediaButton(
