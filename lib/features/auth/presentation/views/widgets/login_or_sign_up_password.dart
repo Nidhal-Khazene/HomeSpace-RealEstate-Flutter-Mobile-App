@@ -3,6 +3,7 @@ import 'package:home_space/constants.dart';
 import 'package:home_space/core/utils/styles.dart';
 import 'package:home_space/core/widgets/custom_button.dart';
 import 'package:home_space/core/widgets/custom_text_field.dart';
+import 'package:home_space/features/auth/presentation/views/finish_sign_up_view.dart';
 import 'package:home_space/features/auth/presentation/views/login_view.dart';
 
 import '../../../../../core/widgets/custom_arrow_back_button.dart';
@@ -32,7 +33,9 @@ class LoginOrSignUpPassword extends StatelessWidget {
               const SizedBox(height: 32),
               const CustomTextField(textContent: "Password"),
               const SizedBox(height: 12),
-              const CustomButton(textContent: "Continue"),
+              GestureDetector(onTap:(){
+                Navigator.pushReplacementNamed(context, FinishSignUpView.routeName);
+              },child: const CustomButton(textContent: "Continue")),
               const SizedBox(height: 12),
               Text("Forgot Password ? Reset", style: AppStyles.regular16),
             ],

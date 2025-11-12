@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:home_space/constants.dart';
+import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/core/utils/styles.dart';
 import 'package:home_space/core/widgets/custom_arrow_back_button.dart';
+import 'package:home_space/core/widgets/custom_button.dart';
 import 'package:home_space/core/widgets/custom_text_field.dart';
 import 'package:home_space/features/auth/presentation/views/widgets/login_or_sign_up_password.dart';
+import 'package:home_space/features/auth/presentation/views/widgets/turn_on_notification_view.dart';
 
 class FinishSignUpViewBody extends StatelessWidget {
   const FinishSignUpViewBody({super.key});
@@ -53,7 +56,19 @@ class FinishSignUpViewBody extends StatelessWidget {
                     color: const Color(0xFF4360F6),
                   ),
                 ),
+                const TextSpan(text: "."),
               ],
+            ),
+          ),
+          const SizedBox(height: 32),
+          GestureDetector(
+            onTap: () {
+              Navigator.popAndPushNamed(context, TurnOnNotification.routeName);
+            },
+            child: CustomButton(
+              textContentColor: ColorsData.kPrimaryColor,
+              textContent: "Agree and Continue",
+              colorBackground: Color(0xffF2F4FD),
             ),
           ),
         ],
