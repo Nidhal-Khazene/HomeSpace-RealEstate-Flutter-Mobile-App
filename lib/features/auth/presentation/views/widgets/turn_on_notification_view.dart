@@ -35,29 +35,27 @@ class TurnOnNotification extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 112),
-              GestureDetector(
+              CustomButton(
                 onTap: () {
                   Navigator.pushReplacementNamed(
                     context,
                     ResetPasswordView.routeName,
                   );
                 },
-                child: const CustomButton(textContent: "Yes Notify"),
+                textContent: "Yes Notify",
               ),
               const SizedBox(height: 16),
-              GestureDetector(
+              CustomButton(
                 onTap: () {
                   Navigator.pushReplacementNamed(
                     context,
                     ResetPasswordView.routeName,
                   );
                 },
-                child: CustomButton(
-                  borderColor: ColorsData.kPrimaryColor,
-                  textContentColor: ColorsData.kPrimaryColor,
-                  textContent: "Skip",
-                  colorBackground: Colors.transparent,
-                ),
+                borderColor: ColorsData.kPrimaryColor,
+                textContentColor: ColorsData.kPrimaryColor,
+                textContent: "Skip",
+                colorBackground: Colors.transparent,
               ),
             ],
           ),

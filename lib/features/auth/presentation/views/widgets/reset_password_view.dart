@@ -35,14 +35,14 @@ class ResetPasswordView extends StatelessWidget {
               const SizedBox(height: 33),
               const CustomTextField(textContent: "Enter Email Address"),
               const SizedBox(height: 12),
-              GestureDetector(
+              CustomButton(
                 onTap: () {
                   Navigator.pushReplacementNamed(
                     context,
                     PasswordResetLinkView.routeName,
                   );
                 },
-                child: const CustomButton(textContent: "Continue"),
+                textContent: "Continue",
               ),
             ],
           ),

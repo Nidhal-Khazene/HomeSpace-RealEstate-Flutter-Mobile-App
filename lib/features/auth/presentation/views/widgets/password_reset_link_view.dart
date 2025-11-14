@@ -33,11 +33,11 @@ class PasswordResetLinkView extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 91),
-              GestureDetector(
+              CustomButton(
                 onTap: () {
                   Navigator.popAndPushNamed(context, LoginView.routeName);
                 },
-                child: const CustomButton(textContent: "Return To Login"),
+                textContent: "Return To Login",
               ),
             ],
           ),

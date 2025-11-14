@@ -77,19 +77,22 @@ class _FinishSignUpViewBodyState extends State<FinishSignUpViewBody> {
             ),
           ),
           const SizedBox(height: 32),
-          GestureDetector(
-            onTap: () {
-              Navigator.popAndPushNamed(context, TurnOnNotification.routeName);
-            },
-            child: CustomButton(
-              textContentColor: readyToContinue
-                  ? Colors.white
-                  : ColorsData.kPrimaryColor,
-              textContent: "Agree and Continue",
-              colorBackground: readyToContinue
-                  ? ColorsData.kPrimaryColor
-                  : const Color(0xffF2F4FD),
-            ),
+          CustomButton(
+            borderColor: readyToContinue
+                ? ColorsData.kPrimaryColor
+                : Colors.transparent,
+            textContent: "Agree and Continue",
+            colorBackground: readyToContinue
+                ? ColorsData.kPrimaryColor
+                : const Color(0xFFF2F4FC),
+            onTap: readyToContinue
+                ? () {
+                    Navigator.popAndPushNamed(
+                      context,
+                      TurnOnNotification.routeName,
+                    );
+                  }
+                : null,
           ),
         ],
       ),

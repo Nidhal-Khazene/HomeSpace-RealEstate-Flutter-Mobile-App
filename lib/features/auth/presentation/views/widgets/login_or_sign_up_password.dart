@@ -33,9 +33,15 @@ class LoginOrSignUpPassword extends StatelessWidget {
               const SizedBox(height: 32),
               const CustomTextField(textContent: "Password"),
               const SizedBox(height: 12),
-              GestureDetector(onTap:(){
-                Navigator.pushReplacementNamed(context, FinishSignUpView.routeName);
-              },child: const CustomButton(textContent: "Continue")),
+              CustomButton(
+                onTap: () {
+                  Navigator.pushReplacementNamed(
+                    context,
+                    FinishSignUpView.routeName,
+                  );
+                },
+                textContent: "Continue",
+              ),
               const SizedBox(height: 12),
               Text("Forgot Password ? Reset", style: AppStyles.regular16),
             ],

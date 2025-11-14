@@ -20,17 +20,15 @@ class LoginOrSignUpView extends StatelessWidget {
         const SizedBox(height: 33),
         const CustomTextField(textContent: "Email Address"),
         const SizedBox(height: 12),
-        GestureDetector(
+        CustomButton(
           onTap: () {
             Navigator.pushReplacementNamed(
               context,
               LoginOrSignUpPassword.routeName,
             );
           },
-          child: const CustomButton(
-            textContent: "Continue",
-            colorBackground: Color(0xff4460F6),
-          ),
+          textContent: "Continue",
+          colorBackground: const Color(0xff4460F6),
         ),
         const SizedBox(height: 95),
         const CustomSocialMediaButton(

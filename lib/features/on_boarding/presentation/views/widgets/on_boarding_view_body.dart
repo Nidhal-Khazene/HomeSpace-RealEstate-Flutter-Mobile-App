@@ -44,14 +44,12 @@ class OnBoardingViewBody extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 48),
-          GestureDetector(
+          CustomButton(
             onTap: () {
               Navigator.pushReplacementNamed(context, LoginView.routeName);
             },
-            child: const CustomButton(
-              textContent: 'Get Started',
-              colorBackground: Color(0xff4360f6),
-            ),
+            textContent: 'Get Started',
+            colorBackground: const Color(0xff4360f6),
           ),
         ],
       ),
