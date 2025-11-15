@@ -19,6 +19,7 @@ class ResetPasswordView extends StatefulWidget {
 
 class _ResetPasswordViewState extends State<ResetPasswordView> {
   bool readyToContinue = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -39,18 +40,37 @@ class _ResetPasswordViewState extends State<ResetPasswordView> {
               const SizedBox(height: 35),
               Text("Reset Password", style: AppStyles.medium32),
               const SizedBox(height: 33),
-              const CustomTextField(textContent: "Enter Email Address"),
+              CustomTextField(
+                onChanged: (data) {
+                  if (data!.isNotEmpty) {
+                    setState(() {
+                      readyToContinue = true;
+                    });
+                  } else {
+                    setState(() {
+                      readyToContinue = false;
+                    });
+                  }
+                },
+                textContent: "Enter Email Address",
+              ),
               const SizedBox(height: 12),
               CustomButton(
-                onTap: () {
-                  Navigator.pushReplacementNamed(
-                    context,
-                    PasswordResetLinkView.routeName,
-                  );
-                },
+                onTap: readyToContinue
+                    ? () {
+                        Navigator.pushReplacementNamed(
+                          context,
+                          PasswordResetLinkView.routeName,
+                        );
+                      }
+                    : null,
                 textContent: "Continue",
-                borderColor: Colors.transparent,
-                colorBackground: ColorsData.kNotReadyButtonColor,
+                borderColor: readyToContinue
+                    ? ColorsData.kPrimaryColor
+                    : Colors.transparent,
+                colorBackground: readyToContinue
+                    ? ColorsData.kPrimaryColor
+                    : ColorsData.kNotReadyButtonColor,
               ),
             ],
           ),
