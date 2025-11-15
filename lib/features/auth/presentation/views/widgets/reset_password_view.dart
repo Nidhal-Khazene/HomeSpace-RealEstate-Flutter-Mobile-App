@@ -8,11 +8,17 @@ import 'package:home_space/core/widgets/custom_text_field.dart';
 import 'package:home_space/features/auth/presentation/views/finish_sign_up_view.dart';
 import 'package:home_space/features/auth/presentation/views/widgets/password_reset_link_view.dart';
 
-class ResetPasswordView extends StatelessWidget {
+class ResetPasswordView extends StatefulWidget {
   const ResetPasswordView({super.key});
 
   static const String routeName = "ResetPasswordView";
 
+  @override
+  State<ResetPasswordView> createState() => _ResetPasswordViewState();
+}
+
+class _ResetPasswordViewState extends State<ResetPasswordView> {
+  bool readyToContinue = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,14 +28,13 @@ class ResetPasswordView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              GestureDetector(
+              CustomArrowBackButton(
                 onTap: () {
                   Navigator.popAndPushNamed(
                     context,
                     FinishSignUpView.routeName,
                   );
                 },
-                child: const CustomArrowBackButton(),
               ),
               const SizedBox(height: 35),
               Text("Reset Password", style: AppStyles.medium32),

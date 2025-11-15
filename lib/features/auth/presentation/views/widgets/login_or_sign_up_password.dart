@@ -22,11 +22,10 @@ class LoginOrSignUpPassword extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              GestureDetector(
+              CustomArrowBackButton(
                 onTap: () {
                   Navigator.popAndPushNamed(context, LoginView.routeName);
                 },
-                child: const CustomArrowBackButton(),
               ),
               const SizedBox(height: 14),
               Text("Password", style: AppStyles.medium32),

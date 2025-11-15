@@ -5,22 +5,26 @@ import 'package:home_space/core/utils/assets.dart';
 import '../../constants.dart';
 
 class CustomArrowBackButton extends StatelessWidget {
-  const CustomArrowBackButton({super.key});
+  const CustomArrowBackButton({super.key, required this.onTap});
+  final void Function() onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 16),
-      child: Container(
-        decoration: const ShapeDecoration(
-          shape: OvalBorder(side: BorderSide(color: Color(0xFFE9E8E8))),
-        ),
-        height: 40,
-        width: 40,
-        child: Center(
-          child: SvgPicture.asset(
-            Assets.assetsImagesIconsArrowBack,
-            colorFilter: ColorFilter.mode(kPrimaryColorFont, BlendMode.srcIn),
+    return GestureDetector(
+      onTap: onTap,
+      child: Padding(
+        padding: const EdgeInsets.only(top: 16),
+        child: Container(
+          decoration: const ShapeDecoration(
+            shape: OvalBorder(side: BorderSide(color: Color(0xFFE9E8E8))),
+          ),
+          height: 40,
+          width: 40,
+          child: Center(
+            child: SvgPicture.asset(
+              Assets.assetsImagesIconsArrowBack,
+              colorFilter: ColorFilter.mode(kPrimaryColorFont, BlendMode.srcIn),
+            ),
           ),
         ),
       ),

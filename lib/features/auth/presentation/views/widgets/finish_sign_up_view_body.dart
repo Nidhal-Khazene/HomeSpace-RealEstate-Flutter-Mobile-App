@@ -25,14 +25,13 @@ class _FinishSignUpViewBodyState extends State<FinishSignUpViewBody> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          GestureDetector(
+          CustomArrowBackButton(
             onTap: () {
               Navigator.popAndPushNamed(
                 context,
                 LoginOrSignUpPassword.routeName,
               );
             },
-            child: const CustomArrowBackButton(),
           ),
           const SizedBox(height: 35),
           Text("Finish Signup", style: AppStyles.medium32),
