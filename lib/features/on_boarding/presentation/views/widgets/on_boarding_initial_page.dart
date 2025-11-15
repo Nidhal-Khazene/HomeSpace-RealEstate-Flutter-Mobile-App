@@ -1,0 +1,64 @@
+import 'package:flutter/material.dart';
+import 'package:home_space/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
+
+import '../../../../../core/utils/assets.dart';
+import '../../../../../core/utils/styles.dart';
+import '../../../../../core/widgets/custom_button.dart';
+
+class OnBoardingInitialPage extends StatelessWidget {
+  const OnBoardingInitialPage({super.key, required this.pageController});
+  final PageController pageController;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8),
+      child: Column(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(24),
+              image: const DecorationImage(
+                image: AssetImage(Assets.assetsImagesOnBoardingImage),
+                fit: BoxFit.fill,
+              ),
+            ),
+            height: MediaQuery.sizeOf(context).height * .5,
+          ),
+          const SizedBox(height: 59),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: Text(
+              'Discover your dream home',
+              textAlign: TextAlign.center,
+              style: AppStyles.medium32,
+            ),
+          ),
+          const SizedBox(height: 18),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: Text(
+              'Discover how to navigate our app \'s features and make the most of your real estate journey.',
+              textAlign: TextAlign.center,
+              style: AppStyles.regular14.copyWith(
+                color: const Color(0xFF8C8B8B),
+              ),
+            ),
+          ),
+          const SizedBox(height: 48),
+          CustomButton(
+            onTap: () {
+              Navigator.pushReplacementNamed(
+                context,
+                OnBoardingPageView.routeName,
+                arguments: pageController,
+              );
+            },
+            textContent: 'Get Started',
+            colorBackground: const Color(0xff4360f6),
+          ),
+        ],
+      ),
+    );
+  }
+}

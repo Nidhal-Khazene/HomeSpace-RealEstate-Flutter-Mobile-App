@@ -6,6 +6,7 @@ import 'package:home_space/features/auth/presentation/views/widgets/password_res
 import 'package:home_space/features/auth/presentation/views/widgets/reset_password_view.dart';
 import 'package:home_space/features/auth/presentation/views/widgets/turn_on_notification_view.dart';
 import 'package:home_space/features/on_boarding/presentation/views/on_boarding_view.dart';
+import 'package:home_space/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 import 'package:home_space/features/splash/presentation/views/splash_view.dart';
 
 Route<dynamic> onGenerateRoutes(RouteSettings settings) {
@@ -31,6 +32,13 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
     case PasswordResetLinkView.routeName:
       return MaterialPageRoute(
         builder: (context) => const PasswordResetLinkView(),
+      );
+    case OnBoardingPageView.routeName:
+      final PageController pageController =
+          settings.arguments as PageController;
+      return MaterialPageRoute(
+        builder: (context) =>
+            OnBoardingPageView(pageController: pageController),
       );
     default:
       return MaterialPageRoute(builder: (context) => const SplashView());
