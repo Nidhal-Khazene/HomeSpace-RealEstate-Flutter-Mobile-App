@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_space/constants.dart';
+import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/core/utils/styles.dart';
 import 'package:home_space/core/widgets/custom_arrow_back_button.dart';
 import 'package:home_space/core/widgets/custom_button.dart';
@@ -43,6 +44,8 @@ class ResetPasswordView extends StatelessWidget {
                   );
                 },
                 textContent: "Continue",
+                borderColor: Colors.transparent,
+                colorBackground: ColorsData.kNotReadyButtonColor,
               ),
             ],
           ),

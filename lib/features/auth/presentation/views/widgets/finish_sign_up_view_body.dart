@@ -84,7 +84,7 @@ class _FinishSignUpViewBodyState extends State<FinishSignUpViewBody> {
             textContent: "Agree and Continue",
             colorBackground: readyToContinue
                 ? ColorsData.kPrimaryColor
-                : const Color(0xFFF2F4FC),
+                : ColorsData.kNotReadyButtonColor,
             onTap: readyToContinue
                 ? () {
                     Navigator.popAndPushNamed(
