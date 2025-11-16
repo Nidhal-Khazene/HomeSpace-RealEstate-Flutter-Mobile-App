@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_space/constants.dart';
+import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/core/widgets/custom_button.dart';
 import 'package:home_space/features/on_boarding/presentation/views/widgets/on_boarding_page_view_body.dart';
 
@@ -26,7 +27,12 @@ class OnBoardingPageView extends StatelessWidget {
               ),
               const CustomButton(textContent: "Continue"),
               const SizedBox(height: 12),
-              const CustomButton(textContent: "Skip"),
+              CustomButton(
+                textContent: "Skip",
+                textContentColor: ColorsData.kPrimaryColor,
+                colorBackground: Colors.transparent,
+                borderColor: ColorsData.kPrimaryColor,
+              ),
             ],
           ),
         ),
