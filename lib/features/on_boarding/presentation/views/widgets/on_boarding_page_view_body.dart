@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_space/features/on_boarding/presentation/views/widgets/what_are_you_looking_for_view.dart';
+import 'package:home_space/features/on_boarding/presentation/views/widgets/what_are_you_looking_view.dart';
 
 class OnBoardingPageViewBody extends StatelessWidget {
   const OnBoardingPageViewBody({super.key, required this.pageController});
@@ -9,7 +10,7 @@ class OnBoardingPageViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return PageView(
       controller: pageController,
-      children: const [WhatAreYouLookingForView(), Placeholder()],
+      children: const [WhatAreYouLookingForView(), WhatAreYouLookingView()],
     );
   }
 }
