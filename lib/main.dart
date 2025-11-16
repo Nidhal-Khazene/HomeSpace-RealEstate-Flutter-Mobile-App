@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_space/constants.dart';
 import 'package:home_space/core/routing/on_generate_route.dart';
+import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/features/splash/presentation/views/splash_view.dart';
 
 void main() {
@@ -16,9 +17,9 @@ class HomeSpace extends StatelessWidget {
       theme: ThemeData(
         fontFamily: kPrimaryFont,
         textTheme: TextTheme(
-          bodyLarge: TextStyle(color: kPrimaryColorFont),
-          bodyMedium: TextStyle(color: kPrimaryColorFont),
-          bodySmall: TextStyle(color: kPrimaryColorFont),
+          bodyLarge: TextStyle(color: ColorsData.kPrimaryColorFont),
+          bodyMedium: TextStyle(color: ColorsData.kPrimaryColorFont),
+          bodySmall: TextStyle(color: ColorsData.kPrimaryColorFont),
         ),
       ),
       debugShowCheckedModeBanner: false,

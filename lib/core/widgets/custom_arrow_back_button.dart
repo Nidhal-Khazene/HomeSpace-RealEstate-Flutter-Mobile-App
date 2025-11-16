@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:home_space/core/utils/assets.dart';
 
-import '../../constants.dart';
+import '../utils/colors.dart';
 
 class CustomArrowBackButton extends StatelessWidget {
   const CustomArrowBackButton({super.key, required this.onTap});
@@ -23,7 +23,10 @@ class CustomArrowBackButton extends StatelessWidget {
           child: Center(
             child: SvgPicture.asset(
               Assets.assetsImagesIconsArrowBack,
-              colorFilter: ColorFilter.mode(kPrimaryColorFont, BlendMode.srcIn),
+              colorFilter: ColorFilter.mode(
+                ColorsData.kPrimaryColorFont,
+                BlendMode.srcIn,
+              ),
             ),
           ),
         ),
