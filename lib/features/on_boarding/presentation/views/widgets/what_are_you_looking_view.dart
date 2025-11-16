@@ -14,7 +14,6 @@ class WhatAreYouLookingView extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 24),
         Text("Where are you looking?", style: AppStyles.medium24),
         const SizedBox(height: 12),
         Text(
