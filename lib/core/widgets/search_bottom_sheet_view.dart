@@ -3,9 +3,14 @@ import 'package:home_space/constants.dart';
 import 'package:home_space/core/widgets/custom_search_bar.dart';
 
 class SearchBottomSheetView extends StatelessWidget {
-  const SearchBottomSheetView({super.key, required this.textContent});
+  const SearchBottomSheetView({
+    super.key,
+    required this.textContent,
+    required this.state,
+  });
 
   final String textContent;
+  final bool state;
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +32,7 @@ class SearchBottomSheetView extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 52),
-            CustomSearchBar(textContent: textContent),
+            CustomSearchBar(state: state, textContent: textContent),
           ],
         ),
       ),

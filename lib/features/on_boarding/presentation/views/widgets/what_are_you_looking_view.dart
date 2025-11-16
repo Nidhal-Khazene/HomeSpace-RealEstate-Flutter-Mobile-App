@@ -3,7 +3,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:home_space/core/utils/assets.dart';
 import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/core/utils/styles.dart';
-import 'package:home_space/core/widgets/custom_search_bar.dart';
+
+import 'on_boarding_search_bottom_sheet.dart';
 
 class WhatAreYouLookingView extends StatelessWidget {
   const WhatAreYouLookingView({super.key});
@@ -23,9 +24,7 @@ class WhatAreYouLookingView extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 46),
-        const CustomSearchBar(
-          textContent: "Search Address, City or Postal code",
-        ),
+        const SearchBottomSheet(),
         const SizedBox(height: 37),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
