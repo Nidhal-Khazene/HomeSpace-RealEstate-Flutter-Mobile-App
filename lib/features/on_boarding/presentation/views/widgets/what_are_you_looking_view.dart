@@ -19,7 +19,7 @@ class WhatAreYouLookingView extends StatelessWidget {
         Text(
           "You can enter cities, neighbourhoods, zip codes and more",
           style: AppStyles.regular12.copyWith(
-            color: ColorsData.kSecondaryColorFont,
+            color: ColorsData.kFontSecondaryColor,
           ),
         ),
         const SizedBox(height: 46),

@@ -48,7 +48,7 @@ class _FinishSignUpViewBodyState extends State<FinishSignUpViewBody> {
           const SizedBox(height: 12),
           CustomTextField(
             textContent: "Katrinabennet21@gmail.com",
-            textContentColor: ColorsData.kPrimaryColorFont,
+            textContentColor: ColorsData.kFontPrimaryColor,
           ),
           const SizedBox(height: 12),
           CustomTextField(

@@ -17,7 +17,7 @@ class WhatAreYouLookingForView extends StatelessWidget {
         Text(
           "We’ll start with these listings, you can change them later.",
           style: AppStyles.regular12.copyWith(
-            color: ColorsData.kSecondaryColorFont,
+            color: ColorsData.kFontSecondaryColor,
           ),
         ),
         const SizedBox(height: 51),

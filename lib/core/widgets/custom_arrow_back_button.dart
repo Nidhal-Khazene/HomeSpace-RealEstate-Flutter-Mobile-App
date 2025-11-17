@@ -24,7 +24,7 @@ class CustomArrowBackButton extends StatelessWidget {
             child: SvgPicture.asset(
               Assets.assetsImagesIconsArrowBack,
               colorFilter: ColorFilter.mode(
-                ColorsData.kPrimaryColorFont,
+                ColorsData.kFontPrimaryColor,
                 BlendMode.srcIn,
               ),
             ),

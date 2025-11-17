@@ -17,9 +17,9 @@ class HomeSpace extends StatelessWidget {
       theme: ThemeData(
         fontFamily: kPrimaryFont,
         textTheme: TextTheme(
-          bodyLarge: TextStyle(color: ColorsData.kPrimaryColorFont),
-          bodyMedium: TextStyle(color: ColorsData.kPrimaryColorFont),
-          bodySmall: TextStyle(color: ColorsData.kPrimaryColorFont),
+          bodyLarge: TextStyle(color: ColorsData.kFontPrimaryColor),
+          bodyMedium: TextStyle(color: ColorsData.kFontPrimaryColor),
+          bodySmall: TextStyle(color: ColorsData.kFontPrimaryColor),
         ),
       ),
       debugShowCheckedModeBanner: false,

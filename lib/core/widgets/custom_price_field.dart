@@ -12,7 +12,7 @@ class CustomPriceField extends StatelessWidget {
       decoration: InputDecoration(
         hintText: textContent,
         hintStyle: AppStyles.regular16.copyWith(
-          color: ColorsData.kSecondaryColorFont,
+          color: ColorsData.kFontSecondaryColor,
         ),
         enabledBorder: buildOutlineInputBorder(),
         disabledBorder: buildOutlineInputBorder(),

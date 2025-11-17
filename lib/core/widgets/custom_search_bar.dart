@@ -27,7 +27,7 @@ class CustomSearchBar extends StatelessWidget {
         fillColor: ColorsData.kNotReadyButtonColor,
         hintText: textContent,
         hintStyle: AppStyles.regular12.copyWith(
-          color: ColorsData.kSecondaryColorFont,
+          color: ColorsData.kFontSecondaryColor,
         ),
         enabledBorder: buildOutlineInputBorder(),
         focusedBorder: buildOutlineInputBorder(),
