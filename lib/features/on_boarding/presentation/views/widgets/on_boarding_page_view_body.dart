@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_space/features/on_boarding/presentation/views/widgets/want_latest_listing_sent_directly_to_you_view.dart';
 import 'package:home_space/features/on_boarding/presentation/views/widgets/what_are_you_looking_for_view.dart';
 import 'package:home_space/features/on_boarding/presentation/views/widgets/what_are_you_looking_view.dart';
 import 'package:home_space/features/on_boarding/presentation/views/widgets/what_is_your_building_preference_view.dart';
@@ -19,6 +20,7 @@ class OnBoardingPageViewBody extends StatelessWidget {
           WhatAreYouLookingView(),
           WhatIsYourPriceRange(),
           WhatIsYourBuildingPreferenceView(),
+          WantLatestListingSentDirectlyToYou(),
         ],
       ),
     );
