@@ -76,6 +76,7 @@ class _WhatIsYourBuildingPreferenceViewState
             ),
           ),
           const SizedBox(height: 24),
+          //Beds Row
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -84,7 +85,18 @@ class _WhatIsYourBuildingPreferenceViewState
                 children: [
                   CustomCircleContainer(
                     widget: SvgPicture.asset(Assets.assetsImagesIconsMinus),
-                    textContentColor: Colors.white,
+                    backgroundColor: ColorsData.kSecondaryColor,
+                    borderColor: ColorsData.kSecondaryColor,
+                  ),
+                  const SizedBox(width: 12),
+                  CustomCircleContainer(
+                    textContent: "3",
+                    backgroundColor: Colors.transparent,
+                    borderColor: ColorsData.kBorderColor,
+                  ),
+                  const SizedBox(width: 12),
+                  CustomCircleContainer(
+                    widget: SvgPicture.asset(Assets.assetsImagesIconsAdd),
                     backgroundColor: ColorsData.kSecondaryColor,
                     borderColor: ColorsData.kSecondaryColor,
                   ),
@@ -93,6 +105,34 @@ class _WhatIsYourBuildingPreferenceViewState
             ],
           ),
           const SizedBox(height: 24),
+          //Baths Row
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text("Baths", style: AppStyles.medium16),
+              Row(
+                children: [
+                  CustomCircleContainer(
+                    widget: SvgPicture.asset(Assets.assetsImagesIconsMinus),
+                    backgroundColor: ColorsData.kSecondaryColor,
+                    borderColor: ColorsData.kSecondaryColor,
+                  ),
+                  const SizedBox(width: 12),
+                  CustomCircleContainer(
+                    textContent: "2",
+                    backgroundColor: Colors.transparent,
+                    borderColor: ColorsData.kBorderColor,
+                  ),
+                  const SizedBox(width: 12),
+                  CustomCircleContainer(
+                    widget: SvgPicture.asset(Assets.assetsImagesIconsAdd),
+                    backgroundColor: ColorsData.kSecondaryColor,
+                    borderColor: ColorsData.kSecondaryColor,
+                  ),
+                ],
+              ),
+            ],
+          ),
         ],
       ),
     );
