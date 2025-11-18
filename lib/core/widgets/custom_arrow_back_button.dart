@@ -12,21 +12,18 @@ class CustomArrowBackButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Padding(
-        padding: const EdgeInsets.only(top: 16),
-        child: Container(
-          decoration: const ShapeDecoration(
-            shape: OvalBorder(side: BorderSide(color: Color(0xFFE9E8E8))),
-          ),
-          height: 40,
-          width: 40,
-          child: Center(
-            child: SvgPicture.asset(
-              Assets.assetsImagesIconsArrowBack,
-              colorFilter: ColorFilter.mode(
-                ColorsData.kFontPrimaryColor,
-                BlendMode.srcIn,
-              ),
+      child: Container(
+        decoration: const ShapeDecoration(
+          shape: OvalBorder(side: BorderSide(color: Color(0xFFE9E8E8))),
+        ),
+        height: 40,
+        width: 40,
+        child: Center(
+          child: SvgPicture.asset(
+            Assets.assetsImagesIconsArrowBack,
+            colorFilter: ColorFilter.mode(
+              ColorsData.kFontPrimaryColor,
+              BlendMode.srcIn,
             ),
           ),
         ),
