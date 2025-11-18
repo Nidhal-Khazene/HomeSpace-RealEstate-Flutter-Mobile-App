@@ -17,6 +17,8 @@ class WhatIsYourBuildingPreferenceView extends StatefulWidget {
 class _WhatIsYourBuildingPreferenceViewState
     extends State<WhatIsYourBuildingPreferenceView> {
   final List<String> propertiesList = ["Apartment", "House", "Villa", "House"];
+  int bedsCounter = 0;
+  int bathsCounter = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -83,22 +85,39 @@ class _WhatIsYourBuildingPreferenceViewState
               Text("Beds", style: AppStyles.medium16),
               Row(
                 children: [
-                  CustomCircleContainer(
-                    widget: SvgPicture.asset(Assets.assetsImagesIconsMinus),
-                    backgroundColor: ColorsData.kSecondaryColor,
-                    borderColor: ColorsData.kSecondaryColor,
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        bedsCounter = bedsCounter - 1;
+                      });
+                      if (bedsCounter < 0) {
+                        bedsCounter = 0;
+                      }
+                    },
+                    child: CustomCircleContainer(
+                      widget: SvgPicture.asset(Assets.assetsImagesIconsMinus),
+                      backgroundColor: ColorsData.kSecondaryColor,
+                      borderColor: ColorsData.kSecondaryColor,
+                    ),
                   ),
                   const SizedBox(width: 12),
                   CustomCircleContainer(
-                    textContent: "3",
+                    textContent: "$bedsCounter",
                     backgroundColor: Colors.transparent,
                     borderColor: ColorsData.kBorderColor,
                   ),
                   const SizedBox(width: 12),
-                  CustomCircleContainer(
-                    widget: SvgPicture.asset(Assets.assetsImagesIconsAdd),
-                    backgroundColor: ColorsData.kSecondaryColor,
-                    borderColor: ColorsData.kSecondaryColor,
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        bedsCounter = bedsCounter + 1;
+                      });
+                    },
+                    child: CustomCircleContainer(
+                      widget: SvgPicture.asset(Assets.assetsImagesIconsAdd),
+                      backgroundColor: ColorsData.kSecondaryColor,
+                      borderColor: ColorsData.kSecondaryColor,
+                    ),
                   ),
                 ],
               ),
@@ -112,22 +131,39 @@ class _WhatIsYourBuildingPreferenceViewState
               Text("Baths", style: AppStyles.medium16),
               Row(
                 children: [
-                  CustomCircleContainer(
-                    widget: SvgPicture.asset(Assets.assetsImagesIconsMinus),
-                    backgroundColor: ColorsData.kSecondaryColor,
-                    borderColor: ColorsData.kSecondaryColor,
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        bathsCounter = bathsCounter - 1;
+                      });
+                      if (bedsCounter < 0) {
+                        bathsCounter = 0;
+                      }
+                    },
+                    child: CustomCircleContainer(
+                      widget: SvgPicture.asset(Assets.assetsImagesIconsMinus),
+                      backgroundColor: ColorsData.kSecondaryColor,
+                      borderColor: ColorsData.kSecondaryColor,
+                    ),
                   ),
                   const SizedBox(width: 12),
                   CustomCircleContainer(
-                    textContent: "2",
+                    textContent: "$bathsCounter",
                     backgroundColor: Colors.transparent,
                     borderColor: ColorsData.kBorderColor,
                   ),
                   const SizedBox(width: 12),
-                  CustomCircleContainer(
-                    widget: SvgPicture.asset(Assets.assetsImagesIconsAdd),
-                    backgroundColor: ColorsData.kSecondaryColor,
-                    borderColor: ColorsData.kSecondaryColor,
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        bathsCounter = bathsCounter + 1;
+                      });
+                    },
+                    child: CustomCircleContainer(
+                      widget: SvgPicture.asset(Assets.assetsImagesIconsAdd),
+                      backgroundColor: ColorsData.kSecondaryColor,
+                      borderColor: ColorsData.kSecondaryColor,
+                    ),
                   ),
                 ],
               ),
