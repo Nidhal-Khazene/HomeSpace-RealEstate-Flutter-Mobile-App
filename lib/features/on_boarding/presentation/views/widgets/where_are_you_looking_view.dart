@@ -6,8 +6,8 @@ import 'package:home_space/core/utils/styles.dart';
 
 import 'on_boarding_search_bottom_sheet.dart';
 
-class WhatAreYouLookingView extends StatelessWidget {
-  const WhatAreYouLookingView({super.key});
+class WhereAreYouLookingView extends StatelessWidget {
+  const WhereAreYouLookingView({super.key});
 
   @override
   Widget build(BuildContext context) {
