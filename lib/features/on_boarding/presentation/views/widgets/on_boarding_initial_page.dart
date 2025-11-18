@@ -47,10 +47,7 @@ class OnBoardingInitialPage extends StatelessWidget {
           const SizedBox(height: 48),
           CustomButton(
             onTap: () {
-              Navigator.pushReplacementNamed(
-                context,
-                OnBoardingPageView.routeName,
-              );
+              Navigator.pushNamed(context, OnBoardingPageView.routeName);
             },
             textContent: 'Get Started',
             colorBackground: const Color(0xff4360f6),

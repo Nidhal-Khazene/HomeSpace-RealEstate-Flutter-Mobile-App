@@ -12,7 +12,9 @@ class OnBoardingPageViewHeader extends StatelessWidget {
     return Row(
       spacing: 121,
       children: [
-        CustomArrowBackButton(onTap: () {}),
+        currentPage + 1 == 1
+            ? const SizedBox(width: 40, height: 40)
+            : CustomArrowBackButton(onTap: () {}),
         Text("${currentPage + 1}/5", style: AppStyles.regular12),
       ],
     );
