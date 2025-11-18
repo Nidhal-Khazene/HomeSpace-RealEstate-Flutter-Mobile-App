@@ -53,7 +53,7 @@ class _OnBoardingPageViewState extends State<OnBoardingPageView> {
                 onTap: () {
                   _goToNextPage();
                 },
-                textContent: "Continue",
+                textContent: currentPage == 4 ? "Yes Notify, Me" : "Continue",
               ),
               const SizedBox(height: 12),
               CustomButton(
