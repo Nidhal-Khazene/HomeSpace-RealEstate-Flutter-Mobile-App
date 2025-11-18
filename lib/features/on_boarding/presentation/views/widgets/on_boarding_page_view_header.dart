@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:home_space/core/utils/styles.dart';
 import 'package:home_space/core/widgets/custom_arrow_back_button.dart';
 
+import 'custom_scroll_container.dart';
+
 class OnBoardingPageViewHeader extends StatelessWidget {
   const OnBoardingPageViewHeader({
     super.key,
@@ -14,17 +16,35 @@ class OnBoardingPageViewHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      spacing: 121,
+    return Column(
       children: [
-        currentPage + 1 == 1
-            ? const SizedBox(width: 40, height: 40)
-            : CustomArrowBackButton(
-                onTap: () {
-                  backPressed();
-                },
-              ),
-        Text("${currentPage + 1}/5", style: AppStyles.regular12),
+        Row(
+          spacing: 121,
+          children: [
+            currentPage == 0
+                ? const SizedBox(width: 40, height: 40)
+                : CustomArrowBackButton(
+                    onTap: () {
+                      backPressed();
+                    },
+                  ),
+            Text("${currentPage + 1}/5", style: AppStyles.regular12),
+          ],
+        ),
+        const SizedBox(height: 24),
+        Row(
+          spacing: 5,
+          children: List.generate(5, (index) {
+            bool isActive = index <= currentPage;
+            return CustomScrollContainer(
+              key: ValueKey(index),
+              isActive: isActive, // Important for list operations
+              // Add additional properties if needed:
+              // width: constraints.maxWidth * 0.18,
+              // margin: EdgeInsets.symmetric(horizontal: 2),
+            );
+          }),
+        ),
       ],
     );
   }
