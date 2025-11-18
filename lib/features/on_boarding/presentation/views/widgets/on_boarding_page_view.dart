@@ -29,19 +29,13 @@ class _OnBoardingPageViewState extends State<OnBoardingPageView> {
     super.initState();
   }
 
-  void _goToPreviousPage() {
-    _pageController.previousPage(
-      duration: const Duration(milliseconds: 300),
-      curve: Curves.easeIn,
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.only(
+            top: 16,
             left: kHorizontalPadding,
             right: kHorizontalPadding,
             bottom: kBottomPadding,
@@ -55,9 +49,17 @@ class _OnBoardingPageViewState extends State<OnBoardingPageView> {
               Expanded(
                 child: OnBoardingPageViewBody(pageController: _pageController),
               ),
-              const CustomButton(textContent: "Continue"),
+              CustomButton(
+                onTap: () {
+                  _goToNextPage();
+                },
+                textContent: "Continue",
+              ),
               const SizedBox(height: 12),
               CustomButton(
+                onTap: () {
+                  _goToNextPage();
+                },
                 textContent: "Skip",
                 textContentColor: ColorsData.kPrimaryColor,
                 colorBackground: Colors.transparent,
@@ -67,6 +69,20 @@ class _OnBoardingPageViewState extends State<OnBoardingPageView> {
           ),
         ),
       ),
+    );
+  }
+
+  void _goToPreviousPage() {
+    _pageController.previousPage(
+      duration: Duration(milliseconds: kMillisecondsDuration),
+      curve: Curves.easeIn,
+    );
+  }
+
+  void _goToNextPage() {
+    _pageController.nextPage(
+      duration: Duration(milliseconds: kMillisecondsDuration),
+      curve: Curves.easeIn,
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_space/constants.dart';
 import 'package:home_space/core/utils/colors.dart';
 
 class CustomScrollContainer extends StatelessWidget {
@@ -9,7 +10,7 @@ class CustomScrollContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 300),
+        duration: Duration(milliseconds: kMillisecondsDuration),
         curve: Curves.easeInOut,
         child: Container(
           width: double.infinity,
