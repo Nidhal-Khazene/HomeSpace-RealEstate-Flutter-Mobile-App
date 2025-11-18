@@ -19,7 +19,6 @@ class _WhatIsYourBuildingPreferenceViewState
   final List<String> propertiesList = ["Apartment", "House", "Villa", "House"];
   int bedsCounter = 0;
   int bathsCounter = 0;
-  bool isPropertyTypeContainerActive = false;
   int currentPropertyTypeContainerPosition = -1;
 
   @override

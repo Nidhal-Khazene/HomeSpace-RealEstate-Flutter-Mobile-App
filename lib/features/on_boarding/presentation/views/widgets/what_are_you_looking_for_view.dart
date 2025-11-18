@@ -4,8 +4,17 @@ import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/core/utils/styles.dart';
 import 'package:home_space/core/widgets/custom_oval_container.dart';
 
-class WhatAreYouLookingForView extends StatelessWidget {
+class WhatAreYouLookingForView extends StatefulWidget {
   const WhatAreYouLookingForView({super.key});
+
+  @override
+  State<WhatAreYouLookingForView> createState() =>
+      _WhatAreYouLookingForViewState();
+}
+
+class _WhatAreYouLookingForViewState extends State<WhatAreYouLookingForView> {
+  List<String> optionsList = ["Buy", "Rent"];
+  int currentPosition = -1;
 
   @override
   Widget build(BuildContext context) {
@@ -25,15 +34,21 @@ class WhatAreYouLookingForView extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 55 - kHorizontalPadding),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              const CustomOvalContainer(textContent: "Buy"),
-              const SizedBox(width: 71),
-              CustomOvalContainer(
-                textContent: "Rent",
-                textContentColor: ColorsData.kPrimaryColor,
-                colorBackground: Colors.transparent,
-              ),
-            ],
+            children: optionsList.asMap().entries.map((entries) {
+              int index = entries.key;
+              var e = entries.value;
+              bool isActive = currentPosition == index;
+              return CustomOvalContainer(
+                onTap: () {
+                  setState(() {
+                    currentPosition = index;
+                  });
+                },
+                textContent: e,
+                textContentColor: !isActive ? ColorsData.kSecondaryColor : null,
+                colorBackground: !isActive ? Colors.transparent : null,
+              );
+            }).toList(),
           ),
         ),
       ],

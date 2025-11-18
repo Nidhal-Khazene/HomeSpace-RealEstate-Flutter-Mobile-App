@@ -26,10 +26,10 @@ class CustomOvalContainer extends StatelessWidget {
         height: 100,
         width: 100,
         decoration: ShapeDecoration(
-          color: colorBackground ?? ColorsData.kPrimaryColor,
+          color: colorBackground ?? ColorsData.kSecondaryColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(100),
-            side: BorderSide(color: borderColor ?? ColorsData.kPrimaryColor),
+            side: BorderSide(color: borderColor ?? ColorsData.kSecondaryColor),
           ),
         ),
         child: Center(
