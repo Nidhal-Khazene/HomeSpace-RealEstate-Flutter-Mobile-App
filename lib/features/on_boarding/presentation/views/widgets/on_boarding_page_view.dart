@@ -29,6 +29,13 @@ class _OnBoardingPageViewState extends State<OnBoardingPageView> {
     super.initState();
   }
 
+  void _goToPreviousPage() {
+    _pageController.previousPage(
+      duration: const Duration(milliseconds: 300),
+      curve: Curves.easeIn,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +48,10 @@ class _OnBoardingPageViewState extends State<OnBoardingPageView> {
           ),
           child: Column(
             children: [
-              OnBoardingPageViewHeader(currentPage: currentPage),
+              OnBoardingPageViewHeader(
+                currentPage: currentPage,
+                backPressed: _goToPreviousPage,
+              ),
               Expanded(
                 child: OnBoardingPageViewBody(pageController: _pageController),
               ),
