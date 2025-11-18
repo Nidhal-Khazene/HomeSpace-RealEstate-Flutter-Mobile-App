@@ -9,7 +9,7 @@ import 'package:home_space/features/on_boarding/presentation/views/on_boarding_v
 import 'package:home_space/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 import 'package:home_space/features/splash/presentation/views/splash_view.dart';
 
-Route<dynamic> onGenerateRoutes(RouteSettings settings) {
+Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
   switch (settings.name) {
     case SplashView.routeName:
       return MaterialPageRoute(builder: (context) => const SplashView());
@@ -38,6 +38,6 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
         builder: (context) => const OnBoardingPageView(),
       );
     default:
-      return MaterialPageRoute(builder: (context) => const SplashView());
+      return null;
   }
 }
