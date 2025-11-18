@@ -88,11 +88,10 @@ class _WhatIsYourBuildingPreferenceViewState
                   GestureDetector(
                     onTap: () {
                       setState(() {
-                        bedsCounter = bedsCounter - 1;
+                        if (bedsCounter > 0) {
+                          bedsCounter = bedsCounter - 1;
+                        }
                       });
-                      if (bedsCounter < 0) {
-                        bedsCounter = 0;
-                      }
                     },
                     child: CustomCircleContainer(
                       widget: SvgPicture.asset(Assets.assetsImagesIconsMinus),
@@ -134,11 +133,10 @@ class _WhatIsYourBuildingPreferenceViewState
                   GestureDetector(
                     onTap: () {
                       setState(() {
-                        bathsCounter = bathsCounter - 1;
+                        if (bathsCounter > 0) {
+                          bathsCounter = bathsCounter - 1;
+                        }
                       });
-                      if (bedsCounter < 0) {
-                        bathsCounter = 0;
-                      }
                     },
                     child: CustomCircleContainer(
                       widget: SvgPicture.asset(Assets.assetsImagesIconsMinus),
