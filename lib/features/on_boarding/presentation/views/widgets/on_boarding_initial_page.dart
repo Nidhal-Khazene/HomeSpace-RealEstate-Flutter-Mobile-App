@@ -6,8 +6,7 @@ import '../../../../../core/utils/styles.dart';
 import '../../../../../core/widgets/custom_button.dart';
 
 class OnBoardingInitialPage extends StatelessWidget {
-  const OnBoardingInitialPage({super.key, required this.pageController});
-  final PageController pageController;
+  const OnBoardingInitialPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +50,6 @@ class OnBoardingInitialPage extends StatelessWidget {
               Navigator.pushReplacementNamed(
                 context,
                 OnBoardingPageView.routeName,
-                arguments: pageController,
               );
             },
             textContent: 'Get Started',

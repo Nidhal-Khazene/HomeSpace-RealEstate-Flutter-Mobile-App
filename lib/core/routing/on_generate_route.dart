@@ -34,11 +34,8 @@ Route<dynamic> onGenerateRoutes(RouteSettings settings) {
         builder: (context) => const PasswordResetLinkView(),
       );
     case OnBoardingPageView.routeName:
-      final PageController pageController =
-          settings.arguments as PageController;
       return MaterialPageRoute(
-        builder: (context) =>
-            OnBoardingPageView(pageController: pageController),
+        builder: (context) => const OnBoardingPageView(),
       );
     default:
       return MaterialPageRoute(builder: (context) => const SplashView());
