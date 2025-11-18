@@ -19,6 +19,8 @@ class _WhatIsYourBuildingPreferenceViewState
   final List<String> propertiesList = ["Apartment", "House", "Villa", "House"];
   int bedsCounter = 0;
   int bathsCounter = 0;
+  bool isPropertyTypeContainerActive = false;
+  int currentPropertyTypeContainerPosition = -1;
 
   @override
   Widget build(BuildContext context) {
@@ -37,12 +39,30 @@ class _WhatIsYourBuildingPreferenceViewState
               runAlignment: WrapAlignment.start,
               spacing: 12,
               runSpacing: 12,
-              children: propertiesList.map((e) {
-                return CustomPropertyTypeContainer(
-                  textContent: e,
-                  textContentColor: Colors.white,
-                  backgroundColor: ColorsData.kSecondaryColor,
-                  borderColor: ColorsData.kSecondaryColor,
+              children: propertiesList.asMap().entries.map((entry) {
+                int index = entry.key;
+                var e = entry.value;
+
+                bool isActive = currentPropertyTypeContainerPosition == index;
+
+                return GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      currentPropertyTypeContainerPosition = index;
+                    });
+                  },
+                  child: CustomPropertyTypeContainer(
+                    textContent: e,
+                    textContentColor: isActive
+                        ? Colors.white
+                        : ColorsData.kFontSecondaryColor,
+                    backgroundColor: isActive
+                        ? ColorsData.kSecondaryColor
+                        : Colors.transparent,
+                    borderColor: isActive
+                        ? ColorsData.kSecondaryColor
+                        : ColorsData.kBorderColor,
+                  ),
                 );
               }).toList(),
             ),
