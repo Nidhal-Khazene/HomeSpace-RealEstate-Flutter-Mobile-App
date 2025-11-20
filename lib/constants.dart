@@ -1,5 +1,5 @@
-final String kPrimaryFont = "GT-Walsheim";
-final double kHorizontalPadding = 23;
-final double kBottomPadding = 32;
-final int kMillisecondsDuration = 300;
-final String kIsOnBoardingViewSeen = "isOnBoardingViewSeen";
+const String kPrimaryFont = "GT-Walsheim";
+const double kHorizontalPadding = 23;
+const double kBottomPadding = 32;
+const int kMillisecondsDuration = 300;
+const String kIsOnBoardingViewSeen = "isOnBoardingViewSeen";

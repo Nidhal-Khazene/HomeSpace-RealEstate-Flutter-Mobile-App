@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:home_space/constants.dart';
+import 'package:home_space/core/services/shared_preferences_singleton.dart';
 import 'package:home_space/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 
 import '../../../../../core/utils/assets.dart';
@@ -47,6 +49,7 @@ class OnBoardingInitialPage extends StatelessWidget {
           const SizedBox(height: 48),
           CustomButton(
             onTap: () {
+              SharedPreferencesSingleton.setBool(kIsOnBoardingViewSeen, true);
               Navigator.pushNamed(context, OnBoardingPageView.routeName);
             },
             textContent: 'Get Started',

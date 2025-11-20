@@ -6,6 +6,8 @@ import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/features/splash/presentation/views/splash_view.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
   await SharedPreferencesSingleton.init();
   runApp(const HomeSpace());
 }
