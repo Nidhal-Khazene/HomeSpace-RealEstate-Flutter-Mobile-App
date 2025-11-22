@@ -5,7 +5,6 @@ import 'package:home_space/core/utils/styles.dart';
 import 'package:home_space/core/widgets/custom_arrow_back_button.dart';
 import 'package:home_space/core/widgets/custom_button.dart';
 import 'package:home_space/core/widgets/custom_text_field.dart';
-import 'package:home_space/features/auth/presentation/views/finish_sign_up_view.dart';
 import 'package:home_space/features/auth/presentation/views/widgets/password_reset_link_view.dart';
 
 class ResetPasswordView extends StatefulWidget {
@@ -25,15 +24,15 @@ class _ResetPasswordViewState extends State<ResetPasswordView> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+          padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CustomArrowBackButton(
                 onTap: () {
-                  Navigator.popAndPushNamed(
+                  Navigator.pushReplacementNamed(
                     context,
-                    FinishSignUpView.routeName,
+                    PasswordResetLinkView.routeName,
                   );
                 },
               ),

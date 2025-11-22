@@ -5,6 +5,7 @@ import 'package:home_space/core/widgets/custom_button.dart';
 import 'package:home_space/core/widgets/custom_text_field.dart';
 import 'package:home_space/features/auth/presentation/views/finish_sign_up_view.dart';
 import 'package:home_space/features/auth/presentation/views/login_view.dart';
+import 'package:home_space/features/auth/presentation/views/widgets/reset_password_view.dart';
 
 import '../../../../../core/widgets/custom_arrow_back_button.dart';
 
@@ -18,7 +19,7 @@ class LoginOrSignUpPassword extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+          padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -34,15 +35,20 @@ class LoginOrSignUpPassword extends StatelessWidget {
               const SizedBox(height: 12),
               CustomButton(
                 onTap: () {
-                  Navigator.pushReplacementNamed(
-                    context,
-                    FinishSignUpView.routeName,
-                  );
+                  Navigator.pushNamed(context, FinishSignUpView.routeName);
                 },
                 textContent: "Continue",
               ),
               const SizedBox(height: 12),
-              Text("Forgot Password ? Reset", style: AppStyles.regular16),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, ResetPasswordView.routeName);
+                },
+                child: Text(
+                  "Forgot Password ? Reset",
+                  style: AppStyles.regular16,
+                ),
+              ),
             ],
           ),
         ),

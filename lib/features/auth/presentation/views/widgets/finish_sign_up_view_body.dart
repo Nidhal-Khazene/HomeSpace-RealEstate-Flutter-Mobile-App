@@ -87,7 +87,7 @@ class _FinishSignUpViewBodyState extends State<FinishSignUpViewBody> {
                   : ColorsData.kNotReadyButtonColor,
               onTap: readyToContinue
                   ? () {
-                      Navigator.popAndPushNamed(
+                      Navigator.pushNamed(
                         context,
                         TurnOnNotification.routeName,
                       );

@@ -50,7 +50,10 @@ class OnBoardingInitialPage extends StatelessWidget {
           CustomButton(
             onTap: () {
               SharedPreferencesSingleton.setBool(kIsOnBoardingViewSeen, true);
-              Navigator.pushNamed(context, OnBoardingPageView.routeName);
+              Navigator.pushReplacementNamed(
+                context,
+                OnBoardingPageView.routeName,
+              );
             },
             textContent: 'Get Started',
             colorBackground: const Color(0xff4360f6),

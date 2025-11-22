@@ -16,7 +16,7 @@ class PasswordResetLinkView extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+          padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -35,7 +35,7 @@ class PasswordResetLinkView extends StatelessWidget {
               const SizedBox(height: 91),
               CustomButton(
                 onTap: () {
-                  Navigator.popAndPushNamed(context, LoginView.routeName);
+                  Navigator.pushReplacementNamed(context, LoginView.routeName);
                 },
                 textContent: "Return To Login",
               ),

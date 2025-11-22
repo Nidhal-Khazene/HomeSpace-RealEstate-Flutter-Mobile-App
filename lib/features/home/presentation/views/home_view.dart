@@ -3,6 +3,7 @@ import 'package:home_space/features/home/presentation/views/widgets/home_view_bo
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
+  static const routeName = "HomeView";
 
   @override
   Widget build(BuildContext context) {

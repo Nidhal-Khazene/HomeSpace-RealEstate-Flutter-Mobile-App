@@ -35,7 +35,7 @@ class _OnBoardingPageViewState extends State<OnBoardingPageView> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.only(
+          padding: const EdgeInsets.only(
             top: 16,
             left: kHorizontalPadding,
             right: kHorizontalPadding,

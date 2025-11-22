@@ -12,42 +12,41 @@ class LoginOrSignUpView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        const SizedBox(height: 70),
-        Text('Login or Signup', style: AppStyles.medium32),
-        const SizedBox(height: 33),
-        const CustomTextField(textContent: "Email Address"),
-        const SizedBox(height: 12),
-        CustomButton(
-          onTap: () {
-            Navigator.pushReplacementNamed(
-              context,
-              LoginOrSignUpPassword.routeName,
-            );
-          },
-          textContent: "Continue",
-          colorBackground: const Color(0xff4460F6),
-        ),
-        const SizedBox(height: 95),
-        const CustomSocialMediaButton(
-          socialIcon: Assets.assetsImagesIconsGoogle,
-          textContent: "Continue with Google",
-        ),
-        const SizedBox(height: 12),
-        const CustomSocialMediaButton(
-          socialIcon: Assets.assetsImagesIconsApple,
-          textContent: "Continue with Apple",
-        ),
-        const SizedBox(height: 12),
-        const CustomSocialMediaButton(
-          socialIcon: Assets.assetsImagesIconsFacebook,
-          textContent: "Continue with Facebook",
-        ),
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const SizedBox(height: 70),
+          Text('Login or Signup', style: AppStyles.medium32),
+          const SizedBox(height: 33),
+          const CustomTextField(textContent: "Email Address"),
+          const SizedBox(height: 12),
+          CustomButton(
+            onTap: () {
+              Navigator.pushNamed(context, LoginOrSignUpPassword.routeName);
+            },
+            textContent: "Continue",
+            colorBackground: const Color(0xff4460F6),
+          ),
+          const SizedBox(height: 95),
+          const CustomSocialMediaButton(
+            socialIcon: Assets.assetsImagesIconsGoogle,
+            textContent: "Continue with Google",
+          ),
+          const SizedBox(height: 12),
+          const CustomSocialMediaButton(
+            socialIcon: Assets.assetsImagesIconsApple,
+            textContent: "Continue with Apple",
+          ),
+          const SizedBox(height: 12),
+          const CustomSocialMediaButton(
+            socialIcon: Assets.assetsImagesIconsFacebook,
+            textContent: "Continue with Facebook",
+          ),
 
-        const SizedBox(height: 12),
-      ],
+          const SizedBox(height: 12),
+        ],
+      ),
     );
   }
 }

@@ -3,7 +3,7 @@ import 'package:home_space/constants.dart';
 import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/core/utils/styles.dart';
 import 'package:home_space/core/widgets/custom_button.dart';
-import 'package:home_space/features/auth/presentation/views/widgets/reset_password_view.dart';
+import 'package:home_space/features/home/presentation/views/home_view.dart';
 
 class TurnOnNotification extends StatelessWidget {
   const TurnOnNotification({super.key});
@@ -15,7 +15,7 @@ class TurnOnNotification extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+          padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -37,20 +37,14 @@ class TurnOnNotification extends StatelessWidget {
               const SizedBox(height: 112),
               CustomButton(
                 onTap: () {
-                  Navigator.pushReplacementNamed(
-                    context,
-                    ResetPasswordView.routeName,
-                  );
+                  Navigator.pushNamed(context, HomeView.routeName);
                 },
                 textContent: "Yes Notify",
               ),
               const SizedBox(height: 16),
               CustomButton(
                 onTap: () {
-                  Navigator.pushReplacementNamed(
-                    context,
-                    ResetPasswordView.routeName,
-                  );
+                  Navigator.pushNamed(context, HomeView.routeName);
                 },
                 borderColor: ColorsData.kPrimaryColor,
                 textContentColor: ColorsData.kPrimaryColor,

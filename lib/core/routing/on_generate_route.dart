@@ -5,6 +5,7 @@ import 'package:home_space/features/auth/presentation/views/widgets/login_or_sig
 import 'package:home_space/features/auth/presentation/views/widgets/password_reset_link_view.dart';
 import 'package:home_space/features/auth/presentation/views/widgets/reset_password_view.dart';
 import 'package:home_space/features/auth/presentation/views/widgets/turn_on_notification_view.dart';
+import 'package:home_space/features/home/presentation/views/home_view.dart';
 import 'package:home_space/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:home_space/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 import 'package:home_space/features/splash/presentation/views/splash_view.dart';
@@ -37,6 +38,8 @@ Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (context) => const OnBoardingPageView(),
       );
+    case HomeView.routeName:
+      return MaterialPageRoute(builder: (context) => const HomeView());
     default:
       return null;
   }
