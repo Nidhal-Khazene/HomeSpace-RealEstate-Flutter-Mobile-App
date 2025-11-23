@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/assets.dart';
+import 'listing_card_carousel_view.dart';
 
 class ListingCard extends StatefulWidget {
   const ListingCard({super.key});
@@ -40,25 +40,7 @@ class _ListingCardState extends State<ListingCard> {
         ),
         child: Stack(
           children: [
-            Positioned(
-              child: SizedBox(
-                height: 198,
-                child: CarouselView(
-                  itemSnapping: true,
-                  controller: _carouselController,
-                  itemExtent: MediaQuery.sizeOf(context).width,
-                  children: List.generate(
-                    4,
-                    (index) => const Image(
-                      image: AssetImage(
-                        Assets.assetsImagesListingBackgroundImage1,
-                      ),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            ListingCardCarouselView(carouselController: _carouselController),
           ],
         ),
       ),
