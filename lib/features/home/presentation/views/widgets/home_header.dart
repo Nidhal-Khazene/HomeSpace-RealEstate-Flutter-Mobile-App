@@ -33,7 +33,7 @@ class HomeHeader extends StatelessWidget {
                   SvgPicture.asset(Assets.assetsImagesIconsLocationIcon),
                   const Expanded(child: SizedBox(width: 8)),
                   Expanded(
-                    flex: 3,
+                    flex: 4,
                     child: SizedBox(
                       width: 81,
                       child: Text(
