@@ -13,8 +13,9 @@ class ListingCardCarouselView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 198,
+      height: 220,
       child: CarouselView(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         itemSnapping: true,
         controller: _carouselController,
         itemExtent: MediaQuery.sizeOf(context).width,
