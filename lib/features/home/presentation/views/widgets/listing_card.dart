@@ -11,16 +11,16 @@ class ListingCard extends StatefulWidget {
 
 class _ListingCardState extends State<ListingCard> {
   late CarouselController _carouselController;
+
   @override
   void initState() {
     _carouselController = CarouselController();
+    _carouselController.animateTo(
+      150,
+      duration: const Duration(milliseconds: 500),
+      curve: Curves.ease,
+    );
     super.initState();
-  }
-
-  @override
-  void dispose() {
-    _carouselController.dispose();
-    super.dispose();
   }
 
   @override
@@ -41,16 +41,22 @@ class _ListingCardState extends State<ListingCard> {
         child: Stack(
           children: [
             Positioned(
-              child: CarouselView(
-                controller: _carouselController,
-                itemExtent: 4,
-                children: [
-                  const Image(
-                    image: AssetImage(
-                      Assets.assetsImagesListingBackgroundImage1,
+              child: SizedBox(
+                height: 198,
+                child: CarouselView(
+                  itemSnapping: true,
+                  controller: _carouselController,
+                  itemExtent: MediaQuery.sizeOf(context).width,
+                  children: List.generate(
+                    4,
+                    (index) => const Image(
+                      image: AssetImage(
+                        Assets.assetsImagesListingBackgroundImage1,
+                      ),
+                      fit: BoxFit.cover,
                     ),
                   ),
-                ],
+                ),
               ),
             ),
           ],
