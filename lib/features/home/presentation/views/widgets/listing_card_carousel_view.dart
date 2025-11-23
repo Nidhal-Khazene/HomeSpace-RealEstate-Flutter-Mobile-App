@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/utils/assets.dart';
-
 class ListingCardCarouselView extends StatelessWidget {
   const ListingCardCarouselView({
     super.key,
     required CarouselController carouselController,
+    required this.image,
   }) : _carouselController = carouselController;
 
   final CarouselController _carouselController;
+  final String image;
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +21,7 @@ class ListingCardCarouselView extends StatelessWidget {
         itemExtent: MediaQuery.sizeOf(context).width,
         children: List.generate(
           4,
-          (index) => const Image(
-            image: AssetImage(Assets.assetsImagesListingBackgroundImage1),
-            fit: BoxFit.cover,
-          ),
+          (index) => Image(image: AssetImage(image), fit: BoxFit.cover),
         ),
       ),
     );
