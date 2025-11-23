@@ -90,6 +90,14 @@ class Assets {
   /// assets/images/icons/two_cards_icon.svg
   static const String assetsImagesIconsTwoCardsIcon = "assets/images/icons/two_cards_icon.svg";
 
+  /// Assets for assetsImagesListingBackgroundImage1
+  /// assets/images/listing_background_image_1.png
+  static const String assetsImagesListingBackgroundImage1 = "assets/images/listing_background_image_1.png";
+
+  /// Assets for assetsImagesListingBackgroundImage2
+  /// assets/images/listing_background_image_2.png
+  static const String assetsImagesListingBackgroundImage2 = "assets/images/listing_background_image_2.png";
+
   /// Assets for assetsImagesOnBoardingImage
   /// assets/images/on_boarding_image.jpg
   static const String assetsImagesOnBoardingImage = "assets/images/on_boarding_image.jpg";

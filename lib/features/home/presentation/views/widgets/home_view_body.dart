@@ -3,6 +3,7 @@ import 'package:home_space/core/utils/styles.dart';
 import 'package:home_space/core/widgets/custom_search_bar.dart';
 import 'package:home_space/features/home/presentation/views/widgets/category_chips.dart';
 import 'package:home_space/features/home/presentation/views/widgets/home_header.dart';
+import 'package:home_space/features/home/presentation/views/widgets/listing_card.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -22,6 +23,8 @@ class HomeViewBody extends StatelessWidget {
         Text("Listings Nearby", style: AppStyles.medium16),
         const SizedBox(height: 16),
         const CategoryChips(),
+        const SizedBox(height: 16),
+        const ListingCard(),
       ],
     );
   }
