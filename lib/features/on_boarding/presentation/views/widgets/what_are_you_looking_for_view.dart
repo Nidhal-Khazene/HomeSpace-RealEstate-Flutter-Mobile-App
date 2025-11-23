@@ -31,7 +31,9 @@ class _WhatAreYouLookingForViewState extends State<WhatAreYouLookingForView> {
         ),
         const SizedBox(height: 51),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: 55 - kHorizontalPadding),
+          padding: const EdgeInsets.symmetric(
+            horizontal: 55 - kHorizontalPadding,
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: optionsList.asMap().entries.map((entries) {
