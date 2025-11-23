@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:home_space/core/utils/colors.dart';
+import 'package:home_space/core/utils/styles.dart';
 
 import 'listing_card_carousel_view.dart';
 
@@ -41,6 +43,28 @@ class _ListingCardState extends State<ListingCard> {
         child: Stack(
           children: [
             ListingCardCarouselView(carouselController: _carouselController),
+            Positioned(
+              top: 12,
+              left: 12,
+              child: Container(
+                decoration: ShapeDecoration(
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                ),
+                padding: const EdgeInsets.symmetric(
+                  vertical: 6,
+                  horizontal: 12,
+                ),
+                child: Text(
+                  "For Sale",
+                  style: AppStyles.medium10.copyWith(
+                    color: ColorsData.kPrimaryColor,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
