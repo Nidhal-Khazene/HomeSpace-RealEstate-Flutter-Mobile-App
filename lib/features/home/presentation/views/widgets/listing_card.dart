@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:home_space/core/utils/assets.dart';
+import 'package:home_space/features/home/presentation/views/widgets/whited_heart_oval_container.dart';
 
 import 'for_sale_container.dart';
 import 'listing_card_carousel_view.dart';
@@ -45,24 +44,10 @@ class _ListingCardState extends State<ListingCard> {
           children: [
             ListingCardCarouselView(carouselController: _carouselController),
             const Positioned(top: 12, left: 12, child: ForSaleContainer()),
-            Positioned(
+            const Positioned(
               top: 12,
               right: 12,
-              child: Container(
-                height: 40,
-                width: 40,
-                decoration: ShapeDecoration(
-                  color: Colors.white.withValues(alpha: 0.2),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(100),
-                  ),
-                ),
-                child: Center(
-                  child: SvgPicture.asset(
-                    Assets.assetsImagesIconsHeartWhiteOutlineIcon,
-                  ),
-                ),
-              ),
+              child: WhitedHeartOvalContainer(),
             ),
           ],
         ),
