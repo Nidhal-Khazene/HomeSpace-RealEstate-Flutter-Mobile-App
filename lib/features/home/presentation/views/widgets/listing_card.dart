@@ -18,6 +18,8 @@ class ListingCard extends StatefulWidget {
 
 class _ListingCardState extends State<ListingCard> {
   late CarouselController _carouselController;
+  int currentIndex = 0;
+  late double itemExtent;
 
   @override
   void initState() {
@@ -27,11 +29,13 @@ class _ListingCardState extends State<ListingCard> {
       duration: const Duration(milliseconds: 500),
       curve: Curves.ease,
     );
+
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
+    itemExtent = MediaQuery.sizeOf(context).width;
     return AspectRatio(
       aspectRatio:
           MediaQuery.sizeOf(context).height *
@@ -60,7 +64,10 @@ class _ListingCardState extends State<ListingCard> {
             Positioned(
               top: 195,
               left: ((MediaQuery.sizeOf(context).width - (24 * 2)) / 2) - 20,
-              child: const ListingCardCarouselViewDotsIndicator(),
+              child: ListingCardCarouselViewDotsIndicator(
+                carouselController: _carouselController,
+                itemExtent: itemExtent,
+              ),
             ),
             Positioned(
               top: 226,
