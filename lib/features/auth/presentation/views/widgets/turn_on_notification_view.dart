@@ -3,7 +3,7 @@ import 'package:home_space/constants.dart';
 import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/core/utils/styles.dart';
 import 'package:home_space/core/widgets/custom_button.dart';
-import 'package:home_space/features/home/presentation/views/home_view.dart';
+import 'package:home_space/features/home/presentation/views/widgets/custom_bottom_navigation_bar.dart';
 
 class TurnOnNotification extends StatelessWidget {
   const TurnOnNotification({super.key});
@@ -37,14 +37,20 @@ class TurnOnNotification extends StatelessWidget {
               const SizedBox(height: 112),
               CustomButton(
                 onTap: () {
-                  Navigator.pushNamed(context, HomeView.routeName);
+                  Navigator.pushNamed(
+                    context,
+                    CustomBottomNavigationBar.routeName,
+                  );
                 },
                 textContent: "Yes Notify",
               ),
               const SizedBox(height: 16),
               CustomButton(
                 onTap: () {
-                  Navigator.pushNamed(context, HomeView.routeName);
+                  Navigator.pushNamed(
+                    context,
+                    CustomBottomNavigationBar.routeName,
+                  );
                 },
                 borderColor: ColorsData.kPrimaryColor,
                 textContentColor: ColorsData.kPrimaryColor,
