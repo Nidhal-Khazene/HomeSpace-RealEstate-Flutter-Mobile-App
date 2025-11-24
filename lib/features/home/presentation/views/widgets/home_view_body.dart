@@ -1,37 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:home_space/core/utils/styles.dart';
-import 'package:home_space/core/widgets/custom_search_bar.dart';
-import 'package:home_space/features/home/presentation/views/widgets/category_chips.dart';
 import 'package:home_space/features/home/presentation/views/widgets/home_header.dart';
-import 'package:home_space/features/home/presentation/views/widgets/listing_card.dart';
 
-import '../../../../../core/utils/assets.dart';
+import 'home_main_section.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const HomeHeader(),
-          const SizedBox(height: 30),
-          const CustomSearchBar(
-            textContent: "Search Address, City or Postal code",
-            state: true,
-          ),
-          const SizedBox(height: 32),
-          Text("Listings Nearby", style: AppStyles.medium16),
-          const SizedBox(height: 16),
-          const CategoryChips(),
-          const SizedBox(height: 16),
-          const ListingCard(image: Assets.assetsImagesListingBackgroundImage1),
-          const SizedBox(height: 12),
-          const ListingCard(image: Assets.assetsImagesListingBackgroundImage2),
-        ],
-      ),
+    return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        HomeHeader(),
+        SizedBox(height: 30),
+        Expanded(child: HomeMainSection()),
+      ],
     );
   }
 }
