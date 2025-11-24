@@ -6,6 +6,7 @@ import 'package:home_space/features/auth/presentation/views/widgets/password_res
 import 'package:home_space/features/auth/presentation/views/widgets/reset_password_view.dart';
 import 'package:home_space/features/auth/presentation/views/widgets/turn_on_notification_view.dart';
 import 'package:home_space/features/home/presentation/views/home_view.dart';
+import 'package:home_space/features/home/presentation/views/widgets/custom_bottom_navigation_bar.dart';
 import 'package:home_space/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:home_space/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 import 'package:home_space/features/splash/presentation/views/splash_view.dart';
@@ -40,6 +41,10 @@ Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
       );
     case HomeView.routeName:
       return MaterialPageRoute(builder: (context) => const HomeView());
+    case CustomBottomNavigationBar.routeName:
+      return MaterialPageRoute(
+        builder: (context) => const CustomBottomNavigationBar(),
+      );
     default:
       return null;
   }
