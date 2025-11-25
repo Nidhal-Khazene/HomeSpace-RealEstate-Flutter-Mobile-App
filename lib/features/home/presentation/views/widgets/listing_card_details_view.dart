@@ -5,6 +5,7 @@ import 'package:home_space/core/utils/assets.dart';
 import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/core/widgets/custom_arrow_back_button.dart';
 import 'package:home_space/core/widgets/custom_oval_container.dart';
+import 'package:home_space/features/home/presentation/views/widgets/listing_card_details_carousel_view.dart';
 
 class ListingCardDetailsView extends StatelessWidget {
   const ListingCardDetailsView({super.key});
@@ -39,6 +40,8 @@ class ListingCardDetailsView extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 32),
+              ListingCardDetailsCarouselView(),
             ],
           ),
         ),

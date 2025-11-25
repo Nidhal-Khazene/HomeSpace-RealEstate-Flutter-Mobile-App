@@ -98,6 +98,10 @@ class Assets {
   /// assets/images/listing_background_image_2.png
   static const String assetsImagesListingBackgroundImage2 = "assets/images/listing_background_image_2.png";
 
+  /// Assets for assetsImagesListingCardDetails
+  /// assets/images/listing_card_details.png
+  static const String assetsImagesListingCardDetails = "assets/images/listing_card_details.png";
+
   /// Assets for assetsImagesOnBoardingImage
   /// assets/images/on_boarding_image.jpg
   static const String assetsImagesOnBoardingImage = "assets/images/on_boarding_image.jpg";
