@@ -7,6 +7,7 @@ import 'package:home_space/features/auth/presentation/views/widgets/reset_passwo
 import 'package:home_space/features/auth/presentation/views/widgets/turn_on_notification_view.dart';
 import 'package:home_space/features/home/presentation/views/home_view.dart';
 import 'package:home_space/features/home/presentation/views/widgets/custom_bottom_navigation_bar.dart';
+import 'package:home_space/features/home/presentation/views/widgets/listing_card_details_view.dart';
 import 'package:home_space/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:home_space/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 import 'package:home_space/features/splash/presentation/views/splash_view.dart';
@@ -44,6 +45,10 @@ Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
     case CustomBottomNavigationBar.routeName:
       return MaterialPageRoute(
         builder: (context) => const CustomBottomNavigationBar(),
+      );
+    case ListingCardDetailsView.routeName:
+      return MaterialPageRoute(
+        builder: (context) => const ListingCardDetailsView(),
       );
     default:
       return null;
