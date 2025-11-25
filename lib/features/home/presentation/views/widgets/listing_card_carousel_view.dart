@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_space/features/home/presentation/views/widgets/listing_card_details_view.dart';
 
 class ListingCardCarouselView extends StatelessWidget {
   const ListingCardCarouselView({
@@ -15,6 +16,9 @@ class ListingCardCarouselView extends StatelessWidget {
     return SizedBox(
       height: 220,
       child: CarouselView(
+        onTap: (index) {
+          Navigator.pushNamed(context, ListingCardDetailsView.routeName);
+        },
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
         itemSnapping: true,
         controller: _carouselController,
