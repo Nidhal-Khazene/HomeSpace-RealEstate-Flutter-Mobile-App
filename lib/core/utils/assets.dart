@@ -110,6 +110,10 @@ class Assets {
   /// assets/images/personal_account.png
   static const String assetsImagesPersonalAccount = "assets/images/personal_account.png";
 
+  /// Assets for assetsImagesPersonalImage2
+  /// assets/images/personal_image_2.png
+  static const String assetsImagesPersonalImage2 = "assets/images/personal_image_2.png";
+
   /// Assets for assetsImagesSplashLogo
   /// assets/images/splash_logo.png
   static const String assetsImagesSplashLogo = "assets/images/splash_logo.png";
