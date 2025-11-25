@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:home_space/core/utils/assets.dart';
 import 'package:home_space/core/utils/colors.dart';
+import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 import '../home_view.dart';
 
@@ -63,7 +64,8 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
               NavigationDestination(
                 icon: Center(
                   child: Icon(
-                    Icons.home,
+                    Iconsax.home_2_copy,
+                    size: 20,
                     color: _selectedIndex == 0
                         ? ColorsData.kSecondaryColor
                         : ColorsData.kFontPrimaryColor,
@@ -102,7 +104,8 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
               NavigationDestination(
                 icon: Center(
                   child: Icon(
-                    Icons.settings,
+                    Iconsax.setting_2_copy,
+                    size: 20,
                     color: _selectedIndex == 3
                         ? ColorsData.kSecondaryColor
                         : ColorsData.kFontPrimaryColor,
