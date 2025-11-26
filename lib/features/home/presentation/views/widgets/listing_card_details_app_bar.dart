@@ -5,7 +5,7 @@ import 'package:iconsax_flutter/iconsax_flutter.dart';
 import '../../../../../core/functions/show_snack_bar.dart';
 import '../../../../../core/utils/assets.dart';
 import '../../../../../core/utils/colors.dart';
-import '../../../../../core/widgets/custom_arrow_back_button.dart';
+import '../../../../../core/widgets/custom_go_back_button.dart';
 import '../../../../../core/widgets/custom_oval_container.dart';
 
 class ListingCardDetailsAppBar extends StatefulWidget {
@@ -24,7 +24,7 @@ class _ListingCardDetailsAppBarState extends State<ListingCardDetailsAppBar> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        CustomArrowBackButton(
+        CustomGoBackButton(
           onTap: () {
             Navigator.pop(context);
           },

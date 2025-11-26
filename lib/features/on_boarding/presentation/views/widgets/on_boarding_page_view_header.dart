@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_space/core/utils/styles.dart';
-import 'package:home_space/core/widgets/custom_arrow_back_button.dart';
+import 'package:home_space/core/widgets/custom_go_back_button.dart';
 
 import 'custom_scroll_container.dart';
 
@@ -23,7 +23,7 @@ class OnBoardingPageViewHeader extends StatelessWidget {
           children: [
             currentPage == 0
                 ? const SizedBox(width: 40, height: 40)
-                : CustomArrowBackButton(
+                : CustomGoBackButton(
                     onTap: () {
                       backPressed();
                     },

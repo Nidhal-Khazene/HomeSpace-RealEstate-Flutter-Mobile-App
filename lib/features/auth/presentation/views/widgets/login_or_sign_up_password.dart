@@ -7,7 +7,7 @@ import 'package:home_space/features/auth/presentation/views/finish_sign_up_view.
 import 'package:home_space/features/auth/presentation/views/login_view.dart';
 import 'package:home_space/features/auth/presentation/views/widgets/reset_password_view.dart';
 
-import '../../../../../core/widgets/custom_arrow_back_button.dart';
+import '../../../../../core/widgets/custom_go_back_button.dart';
 
 class LoginOrSignUpPassword extends StatelessWidget {
   const LoginOrSignUpPassword({super.key});
@@ -23,7 +23,7 @@ class LoginOrSignUpPassword extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              CustomArrowBackButton(
+              CustomGoBackButton(
                 onTap: () {
                   Navigator.popAndPushNamed(context, LoginView.routeName);
                 },

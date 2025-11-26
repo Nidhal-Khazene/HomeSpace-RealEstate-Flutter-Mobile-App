@@ -4,9 +4,10 @@ import 'package:home_space/core/utils/assets.dart';
 
 import '../utils/colors.dart';
 
-class CustomArrowBackButton extends StatelessWidget {
-  const CustomArrowBackButton({super.key, required this.onTap});
+class CustomGoBackButton extends StatelessWidget {
+  const CustomGoBackButton({super.key, required this.onTap, this.widget});
   final void Function() onTap;
+  final Widget? widget;
 
   @override
   Widget build(BuildContext context) {
@@ -19,13 +20,15 @@ class CustomArrowBackButton extends StatelessWidget {
         height: 40,
         width: 40,
         child: Center(
-          child: SvgPicture.asset(
-            Assets.assetsImagesIconsArrowBack,
-            colorFilter: ColorFilter.mode(
-              ColorsData.kFontPrimaryColor,
-              BlendMode.srcIn,
-            ),
-          ),
+          child:
+              widget ??
+              SvgPicture.asset(
+                Assets.assetsImagesIconsArrowBack,
+                colorFilter: ColorFilter.mode(
+                  ColorsData.kFontPrimaryColor,
+                  BlendMode.srcIn,
+                ),
+              ),
         ),
       ),
     );
