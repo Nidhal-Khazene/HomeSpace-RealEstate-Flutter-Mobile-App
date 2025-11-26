@@ -117,5 +117,9 @@ class Assets {
   /// Assets for assetsImagesSplashLogo
   /// assets/images/splash_logo.png
   static const String assetsImagesSplashLogo = "assets/images/splash_logo.png";
+
+  /// Assets for assetsImagesTrueCircleContainer
+  /// assets/images/true_circle_container.svg
+  static const String assetsImagesTrueCircleContainer = "assets/images/true_circle_container.svg";
 }
 

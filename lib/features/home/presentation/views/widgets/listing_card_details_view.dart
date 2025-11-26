@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:home_space/constants.dart';
-import 'package:home_space/core/utils/assets.dart';
 import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/core/utils/styles.dart';
-import 'package:home_space/core/widgets/custom_arrow_back_button.dart';
-import 'package:home_space/core/widgets/custom_oval_container.dart';
 import 'package:home_space/features/home/presentation/views/widgets/listing_card_details_carousel_view.dart';
 
 import 'Listing_card_properties_row.dart';
+import 'listing_card_details_app_bar.dart';
 import 'listing_card_details_custom_bottom_bar.dart';
 import 'listing_card_details_personal_list_tile.dart';
 
@@ -28,25 +25,7 @@ class ListingCardDetailsView extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    CustomArrowBackButton(
-                      onTap: () {
-                        Navigator.pop(context);
-                      },
-                    ),
-                    CustomOvalContainer(
-                      height: 40,
-                      width: 40,
-                      colorBackground: Colors.transparent,
-                      borderColor: ColorsData.kBorderColor,
-                      widget: SvgPicture.asset(
-                        Assets.assetsImagesIconsHeartBlackOutlinedIcon,
-                      ),
-                    ),
-                  ],
-                ),
+                const ListingCardDetailsAppBar(),
                 const SizedBox(height: 32),
                 const ListingCardDetailsCarouselView(),
                 const SizedBox(height: 24),
