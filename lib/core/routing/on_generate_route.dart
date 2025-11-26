@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_space/core/utils/assets.dart';
 import 'package:home_space/features/auth/presentation/views/finish_sign_up_view.dart';
 import 'package:home_space/features/auth/presentation/views/login_view.dart';
 import 'package:home_space/features/auth/presentation/views/widgets/login_or_sign_up_password.dart';
@@ -52,8 +53,9 @@ Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
         builder: (context) => const ListingCardDetailsView(),
       );
     case ListingCardDetailsImageView.routeName:
+      final String image = Assets.assetsImagesListingCardDetails;
       return MaterialPageRoute(
-        builder: (context) => const ListingCardDetailsImageView(),
+        builder: (context) => ListingCardDetailsImageView(image: image),
       );
     default:
       return null;

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_space/constants.dart';
+import 'package:home_space/core/utils/assets.dart';
 import 'package:home_space/features/home/presentation/views/widgets/listing_card_carousel_view_dots_indicator.dart';
 import 'package:home_space/features/home/presentation/views/widgets/listing_card_details_image_view.dart';
 
@@ -55,8 +56,10 @@ class _ListingCardDetailsCarouselViewState
               itemExtent: MediaQuery.sizeOf(context).width,
               children: List.generate(
                 4,
-                (index) =>
-                    Image(image: AssetImage(widget.image), fit: BoxFit.cover),
+                (index) => Image(
+                  image: AssetImage(Assets.assetsImagesListingCardDetails),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
             Positioned(
