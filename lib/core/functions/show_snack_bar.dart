@@ -29,7 +29,7 @@ void showSnackBar(BuildContext context) {
         horizontal: kHorizontalPadding,
       ),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-      duration: const Duration(seconds: 10),
+      duration: const Duration(seconds: 3),
     ),
   );
 }
