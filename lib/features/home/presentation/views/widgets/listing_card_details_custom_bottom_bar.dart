@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_space/features/home/presentation/views/widgets/more_actions_bottom_sheet.dart';
 import 'package:home_space/features/home/presentation/views/widgets/send_enquiry_view.dart';
 
 import '../../../../../constants.dart';
@@ -44,10 +45,23 @@ class ListingCardDetailsCustomBottomBar extends StatelessWidget {
                 textStyle: AppStyles.regular12.copyWith(color: Colors.white),
                 colorBackground: ColorsData.kSecondaryColor,
               ),
-              CustomCircleContainer(
-                backgroundColor: Colors.transparent,
-                borderColor: ColorsData.kBorderColor,
-                widget: const CustomThreeDots(),
+              GestureDetector(
+                onTap: () async {
+                  await showModalBottomSheet(
+                    backgroundColor: Colors.white,
+                    isScrollControlled: true,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(32),
+                    ),
+                    context: context,
+                    builder: (context) => const MoreActionsBottomSheet(),
+                  );
+                },
+                child: CustomCircleContainer(
+                  backgroundColor: Colors.transparent,
+                  borderColor: ColorsData.kBorderColor,
+                  widget: const CustomThreeDots(),
+                ),
               ),
             ],
           ),
