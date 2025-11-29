@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_space/features/home/presentation/views/widgets/send_enquiry_view.dart';
 
 import '../../../../../constants.dart';
 import '../../../../../core/utils/colors.dart';
@@ -33,6 +34,9 @@ class ListingCardDetailsCustomBottomBar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               CustomButton(
+                onTap: () {
+                  Navigator.pushNamed(context, SendEnquiryView.routeName);
+                },
                 verticalPadding: 0,
                 height: 38,
                 width: 117,
