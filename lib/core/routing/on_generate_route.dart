@@ -15,6 +15,8 @@ import 'package:home_space/features/on_boarding/presentation/views/on_boarding_v
 import 'package:home_space/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 import 'package:home_space/features/splash/presentation/views/splash_view.dart';
 
+import '../../features/home/presentation/views/widgets/send_enquiry_success_view.dart';
+
 Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
   switch (settings.name) {
     case SplashView.routeName:
@@ -60,6 +62,11 @@ Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
       );
     case SendEnquiryView.routeName:
       return MaterialPageRoute(builder: (context) => const SendEnquiryView());
+    case SendEnquirySuccessView.routeName:
+      return MaterialPageRoute(
+        builder: (context) => const SendEnquirySuccessView(),
+      );
+
     default:
       return null;
   }
