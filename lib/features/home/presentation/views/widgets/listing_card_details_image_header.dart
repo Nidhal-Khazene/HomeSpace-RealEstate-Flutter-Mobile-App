@@ -50,7 +50,8 @@ class _ListingCardDetailsImageHeaderState
         SizedBox(
           width:
               ((MediaQuery.sizeOf(context).width - kHorizontalPadding) / 2) -
-              24 * 2,
+              24 * 2 -
+              20,
         ),
         Text(
           "${currentIndex + 1}/$listLength",

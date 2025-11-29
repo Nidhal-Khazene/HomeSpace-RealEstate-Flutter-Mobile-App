@@ -3,6 +3,7 @@ import 'package:home_space/constants.dart';
 import 'package:home_space/core/utils/assets.dart';
 import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/features/home/presentation/views/widgets/listing_card_details_image_carousel_view.dart';
+import 'package:home_space/features/home/presentation/views/widgets/listing_card_details_image_dots_indicator.dart';
 
 import 'listing_card_details_image_header.dart';
 
@@ -56,6 +57,11 @@ class _ListingCardDetailsImageViewState
               ListingCardDetailsImageCarouselView(
                 carouselController: _carouselController,
                 image: Assets.assetsImagesListingCardDetails,
+              ),
+              const SizedBox(height: 151),
+              ListingCardDetailsImageDotsIndicator(
+                carouselController: _carouselController,
+                itemExtent: itemExtent,
               ),
             ],
           ),
