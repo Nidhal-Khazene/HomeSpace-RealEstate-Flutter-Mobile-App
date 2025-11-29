@@ -2,34 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:home_space/constants.dart';
 import 'package:home_space/core/utils/assets.dart';
 
-class ListingCardDetailsImageCarouselView extends StatefulWidget {
-  const ListingCardDetailsImageCarouselView({super.key, required this.image});
+class ListingCardDetailsImageCarouselView extends StatelessWidget {
+  const ListingCardDetailsImageCarouselView({
+    super.key,
+    required this.image,
+    required this.carouselController,
+  });
   final String image;
-
-  @override
-  State<ListingCardDetailsImageCarouselView> createState() =>
-      _ListingCardDetailsImageCarouselViewState();
-}
-
-class _ListingCardDetailsImageCarouselViewState
-    extends State<ListingCardDetailsImageCarouselView> {
-  late CarouselController _carouselController;
-  late double itemExtent;
-
-  @override
-  void initState() {
-    _carouselController = CarouselController();
-    _carouselController.animateTo(
-      150,
-      duration: const Duration(milliseconds: 500),
-      curve: Curves.ease,
-    );
-    super.initState();
-  }
+  final CarouselController carouselController;
 
   @override
   Widget build(BuildContext context) {
-    itemExtent = MediaQuery.sizeOf(context).width;
     return AspectRatio(
       aspectRatio:
           MediaQuery.sizeOf(context).height *
@@ -44,7 +27,7 @@ class _ListingCardDetailsImageCarouselViewState
                 borderRadius: BorderRadius.circular(24),
               ),
               itemSnapping: true,
-              controller: _carouselController,
+              controller: carouselController,
               itemExtent: MediaQuery.sizeOf(context).width,
               children: List.generate(
                 4,
