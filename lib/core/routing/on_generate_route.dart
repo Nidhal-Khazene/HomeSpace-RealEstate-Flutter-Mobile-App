@@ -10,6 +10,7 @@ import 'package:home_space/features/home/presentation/views/home_view.dart';
 import 'package:home_space/features/home/presentation/views/widgets/custom_bottom_navigation_bar.dart';
 import 'package:home_space/features/home/presentation/views/widgets/listing_card_details_image_view.dart';
 import 'package:home_space/features/home/presentation/views/widgets/listing_card_details_view.dart';
+import 'package:home_space/features/home/presentation/views/widgets/send_enquiry_view.dart';
 import 'package:home_space/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:home_space/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 import 'package:home_space/features/splash/presentation/views/splash_view.dart';
@@ -57,6 +58,8 @@ Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (context) => ListingCardDetailsImageView(image: image),
       );
+    case SendEnquiryView.routeName:
+      return MaterialPageRoute(builder: (context) => const SendEnquiryView());
     default:
       return null;
   }
