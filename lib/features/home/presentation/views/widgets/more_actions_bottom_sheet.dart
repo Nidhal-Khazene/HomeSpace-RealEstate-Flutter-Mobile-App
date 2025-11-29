@@ -3,6 +3,8 @@ import 'package:home_space/constants.dart';
 import 'package:home_space/core/utils/styles.dart';
 import 'package:home_space/core/widgets/bottom_sheet_line_header.dart';
 
+import 'listing_card_details_bottom_sheet_list_tile.dart';
+
 class MoreActionsBottomSheet extends StatelessWidget {
   const MoreActionsBottomSheet({super.key});
 
@@ -23,6 +25,13 @@ class MoreActionsBottomSheet extends StatelessWidget {
               child: Text("More Actions", style: AppStyles.medium16),
             ),
             const SizedBox(height: 24),
+            const ListingCardDetailsCustomBottomSheetListTile(
+              title: "Schedule tour",
+            ),
+            const SizedBox(height: 12),
+            const ListingCardDetailsCustomBottomSheetListTile(
+              title: "Share listing",
+            ),
           ],
         ),
       ),
