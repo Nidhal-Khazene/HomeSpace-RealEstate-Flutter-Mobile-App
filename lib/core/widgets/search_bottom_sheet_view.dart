@@ -5,6 +5,8 @@ import 'package:home_space/core/utils/assets.dart';
 import 'package:home_space/core/utils/styles.dart';
 import 'package:home_space/core/widgets/custom_search_bar.dart';
 
+import 'bottom_sheet_line_header.dart';
+
 class SearchBottomSheetView extends StatefulWidget {
   const SearchBottomSheetView({
     super.key,
@@ -37,16 +39,7 @@ class _SearchBottomSheetViewState extends State<SearchBottomSheetView> {
         child: Column(
           children: [
             const SizedBox(height: 8),
-            Container(
-              width: 24,
-              height: 4,
-              decoration: ShapeDecoration(
-                color: const Color(0xFFE8ECFF),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(35),
-                ),
-              ),
-            ),
+            const BottomSheetLineHeader(),
             const SizedBox(height: 52),
             CustomSearchBar(
               state: widget.state,
