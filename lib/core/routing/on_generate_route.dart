@@ -8,6 +8,7 @@ import 'package:home_space/features/auth/presentation/views/widgets/reset_passwo
 import 'package:home_space/features/auth/presentation/views/widgets/turn_on_notification_view.dart';
 import 'package:home_space/features/home/presentation/views/home_view.dart';
 import 'package:home_space/features/home/presentation/views/widgets/custom_bottom_navigation_bar.dart';
+import 'package:home_space/features/home/presentation/views/widgets/home_notification_view.dart';
 import 'package:home_space/features/home/presentation/views/widgets/listing_card_details_image_view.dart';
 import 'package:home_space/features/home/presentation/views/widgets/listing_card_details_view.dart';
 import 'package:home_space/features/home/presentation/views/widgets/send_enquiry_view.dart';
@@ -66,7 +67,10 @@ Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (context) => const SendEnquirySuccessView(),
       );
-
+    case HomeNotificationView.routeName:
+      return MaterialPageRoute(
+        builder: (context) => const HomeNotificationView(),
+      );
     default:
       return null;
   }
