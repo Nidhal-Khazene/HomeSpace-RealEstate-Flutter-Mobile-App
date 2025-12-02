@@ -2,6 +2,10 @@
 class Assets {
   Assets._();
   
+  /// Assets for assetsImagesDefaultImageListTile
+  /// assets/images/default_image_list_tile.png
+  static const String assetsImagesDefaultImageListTile = "assets/images/default_image_list_tile.png";
+
   /// Assets for assetsImagesIconsAdd
   /// assets/images/icons/add.svg
   static const String assetsImagesIconsAdd = "assets/images/icons/add.svg";
@@ -89,6 +93,14 @@ class Assets {
   /// Assets for assetsImagesIconsTwoCardsIcon
   /// assets/images/icons/two_cards_icon.svg
   static const String assetsImagesIconsTwoCardsIcon = "assets/images/icons/two_cards_icon.svg";
+
+  /// Assets for assetsImagesImage1ListTile
+  /// assets/images/image_1_list_tile.png
+  static const String assetsImagesImage1ListTile = "assets/images/image_1_list_tile.png";
+
+  /// Assets for assetsImagesImage2ListTile
+  /// assets/images/image_2_list_tile.png
+  static const String assetsImagesImage2ListTile = "assets/images/image_2_list_tile.png";
 
   /// Assets for assetsImagesListingBackgroundImage1
   /// assets/images/listing_background_image_1.png
