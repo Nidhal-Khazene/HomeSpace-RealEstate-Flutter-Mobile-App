@@ -19,7 +19,7 @@ class LoginOrSignUpPassword extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+          padding: kPrimaryScreenPadding,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

@@ -21,7 +21,7 @@ class _FinishSignUpViewBodyState extends State<FinishSignUpViewBody> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+      padding: kPrimaryScreenPadding,
       child: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
