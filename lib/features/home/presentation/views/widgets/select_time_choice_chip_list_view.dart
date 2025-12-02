@@ -52,14 +52,10 @@ class _SelectTimeChoiceChipListViewState
             backgroundColor: Colors.transparent,
             selectedColor: ColorsData.kSecondaryColor,
             labelStyle: AppStyles.regular12.copyWith(
-              color: isSelected ? Colors.white : ColorsData.kFontSecondaryColor,
+              color: isSelected ? Colors.white : ColorsData.kSecondaryColor,
             ),
             shape: RoundedRectangleBorder(
-              side: BorderSide(
-                color: isSelected
-                    ? ColorsData.kSecondaryColor
-                    : ColorsData.kBorderColor,
-              ),
+              side: BorderSide(color: ColorsData.kSecondaryColor),
               borderRadius: BorderRadius.circular(33),
             ),
           );
