@@ -8,8 +8,10 @@ class ListingCardDetailsCustomBottomSheetListTile extends StatelessWidget {
   const ListingCardDetailsCustomBottomSheetListTile({
     super.key,
     required this.title,
+    this.onTap,
   });
   final String title;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +26,13 @@ class ListingCardDetailsCustomBottomSheetListTile extends StatelessWidget {
         size: 20,
       ),
       title: Text(title, style: AppStyles.regular16),
-      trailing: Icon(
-        Icons.arrow_forward_ios,
-        color: ColorsData.kFontPrimaryColor,
-        size: 24,
+      trailing: GestureDetector(
+        onTap: onTap,
+        child: Icon(
+          Icons.arrow_forward_ios,
+          color: ColorsData.kFontPrimaryColor,
+          size: 24,
+        ),
       ),
     );
   }
