@@ -21,7 +21,7 @@ class ListingCardDetailsView extends StatelessWidget {
       bottomNavigationBar: const ListingCardDetailsCustomBottomBar(),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+          padding: kPrimaryScreenPadding,
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,

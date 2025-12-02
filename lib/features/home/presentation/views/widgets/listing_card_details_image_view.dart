@@ -42,11 +42,7 @@ class _ListingCardDetailsImageViewState
       backgroundColor: ColorsData.kFontPrimaryColor,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(
-            left: kHorizontalPadding,
-            right: kHorizontalPadding,
-            top: 16,
-          ),
+          padding: kPrimaryScreenPadding,
           child: Column(
             children: [
               ListingCardDetailsImageHeader(
