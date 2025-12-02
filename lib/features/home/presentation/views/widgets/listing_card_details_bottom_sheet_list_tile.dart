@@ -14,7 +14,7 @@ class ListingCardDetailsCustomBottomSheetListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      contentPadding: const EdgeInsets.symmetric(vertical: 22, horizontal: 12),
+      contentPadding: const EdgeInsets.symmetric(vertical: 11, horizontal: 12),
       shape: RoundedRectangleBorder(
         side: BorderSide(color: ColorsData.kBorderColor, width: 1),
       ),
