@@ -16,6 +16,7 @@ import 'package:home_space/features/on_boarding/presentation/views/on_boarding_v
 import 'package:home_space/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 import 'package:home_space/features/splash/presentation/views/splash_view.dart';
 
+import '../../features/home/presentation/views/widgets/schedule_tour_view.dart';
 import '../../features/home/presentation/views/widgets/send_enquiry_success_view.dart';
 
 Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
@@ -71,6 +72,8 @@ Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (context) => const HomeNotificationView(),
       );
+    case ScheduleTourView.routeName:
+      return MaterialPageRoute(builder: (context) => const ScheduleTourView());
     default:
       return null;
   }
