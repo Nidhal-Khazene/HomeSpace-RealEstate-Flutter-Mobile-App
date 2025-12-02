@@ -36,7 +36,7 @@ class _OnBoardingPageViewState extends State<OnBoardingPageView> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(
-            top: 16,
+            top: 29,
             left: kHorizontalPadding,
             right: kHorizontalPadding,
             bottom: kBottomPadding,
