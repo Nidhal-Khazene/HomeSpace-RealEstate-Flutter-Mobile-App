@@ -43,16 +43,15 @@ class _CustomCalendarState extends State<CustomCalendar> {
       child: Padding(
         padding: const EdgeInsets.all(12),
         child: TableCalendar(
-          rowHeight: 60,
           startingDayOfWeek: StartingDayOfWeek.sunday,
           selectedDayPredicate: (day) => isSameDay(day, today),
           availableGestures: AvailableGestures.none,
           headerVisible: false,
+          // daysOfWeekVisible: false,
           focusedDay: today,
           firstDay: DateTime.now(),
           lastDay: DateTime.utc(2026),
           onDaySelected: _onDaySelected,
-
           calendarStyle: buildCalendarStyle(),
           calendarBuilders: buildCalendarBuilders(),
         ),
@@ -64,23 +63,10 @@ class _CustomCalendarState extends State<CustomCalendar> {
     return CalendarBuilders(
       dowBuilder: (context, day) {
         List<String> letters = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
-        return Container(
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            border: Border(
-              bottom: BorderSide(
-                color: ColorsData.kBorderColor, // divider color
-                width: 2, // thickness
-              ),
-            ),
-          ),
-          child: Center(
-            child: Text(
-              letters[day.weekday % 7],
-              style: AppStyles.bold16.copyWith(
-                color: ColorsData.kSecondaryColor,
-              ),
-            ),
+        return Center(
+          child: Text(
+            letters[day.weekday % 7],
+            style: AppStyles.bold16.copyWith(color: ColorsData.kSecondaryColor),
           ),
         );
       },
