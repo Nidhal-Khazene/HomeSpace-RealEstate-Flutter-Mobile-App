@@ -20,8 +20,9 @@ class _CustomCalendarState extends State<CustomCalendar> {
   }
 
   bool _isSameWeek(DateTime day1, DateTime day2) {
-    DateTime weekStart(DateTime d) =>
-        d.subtract(Duration(days: d.weekday - DateTime.monday));
+    DateTime weekStart(DateTime d) {
+      return d.subtract(Duration(days: d.weekday % 7));
+    }
 
     final start1 = weekStart(day1);
     final start2 = weekStart(day2);
@@ -31,17 +32,31 @@ class _CustomCalendarState extends State<CustomCalendar> {
 
   @override
   Widget build(BuildContext context) {
-    return TableCalendar(
-      selectedDayPredicate: (day) => isSameDay(day, today),
-      availableGestures: AvailableGestures.none,
-      headerVisible: false,
-      focusedDay: today,
-      firstDay: DateTime.now(),
-      lastDay: DateTime.utc(2026),
-      onDaySelected: _onDaySelected,
-      calendarStyle: buildCalendarStyle(),
+    return Container(
+      decoration: BoxDecoration(
+        border: Border.all(
+          color: ColorsData.kBorderColor, // border color
+          width: 2, // border width
+        ),
+        borderRadius: BorderRadius.circular(8), // optional rounded corners
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(12),
+        child: TableCalendar(
+          rowHeight: 60,
+          startingDayOfWeek: StartingDayOfWeek.sunday,
+          selectedDayPredicate: (day) => isSameDay(day, today),
+          availableGestures: AvailableGestures.none,
+          headerVisible: false,
+          focusedDay: today,
+          firstDay: DateTime.now(),
+          lastDay: DateTime.utc(2026),
+          onDaySelected: _onDaySelected,
 
-      calendarBuilders: buildCalendarBuilders(),
+          calendarStyle: buildCalendarStyle(),
+          calendarBuilders: buildCalendarBuilders(),
+        ),
+      ),
     );
   }
 
@@ -49,13 +64,27 @@ class _CustomCalendarState extends State<CustomCalendar> {
     return CalendarBuilders(
       dowBuilder: (context, day) {
         List<String> letters = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
-        return Center(
-          child: Text(
-            letters[day.weekday - 1],
-            style: AppStyles.bold16.copyWith(color: ColorsData.kSecondaryColor),
+        return Container(
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            border: Border(
+              bottom: BorderSide(
+                color: ColorsData.kBorderColor, // divider color
+                width: 2, // thickness
+              ),
+            ),
+          ),
+          child: Center(
+            child: Text(
+              letters[day.weekday % 7],
+              style: AppStyles.bold16.copyWith(
+                color: ColorsData.kSecondaryColor,
+              ),
+            ),
           ),
         );
       },
+
       defaultBuilder: (context, day, focusedDay) {
         if (_isSameWeek(day, today) && !isSameDay(day, today)) {
           return Container(
@@ -64,6 +93,7 @@ class _CustomCalendarState extends State<CustomCalendar> {
               '${day.day}',
               style: AppStyles.regular16.copyWith(
                 color: ColorsData.kSecondaryColor,
+                fontWeight: FontWeight.bold,
               ),
             ),
           );
@@ -71,19 +101,23 @@ class _CustomCalendarState extends State<CustomCalendar> {
 
         return null;
       },
+
       todayBuilder: (context, day, _) {
         return Container(
           decoration: BoxDecoration(
-            color: ColorsData.kPrimaryColor,
+            color: ColorsData.kBorderColor,
             shape: BoxShape.circle,
           ),
           alignment: Alignment.center,
           child: Text(
             '${day.day}',
-            style: AppStyles.medium16.copyWith(color: Colors.white),
+            style: AppStyles.medium16.copyWith(
+              color: ColorsData.kSecondaryColor,
+            ),
           ),
         );
       },
+
       selectedBuilder: (context, day, focusedDay) {
         return Container(
           decoration: BoxDecoration(

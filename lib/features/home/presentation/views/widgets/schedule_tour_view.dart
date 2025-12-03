@@ -17,25 +17,27 @@ class ScheduleTourView extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: kPrimaryScreenPadding,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              CustomAppBar(
-                title: "Schedule Tour",
-                widthFromBackButton: 77,
-                textStyle: AppStyles.medium16,
-              ),
-              const SizedBox(height: 32),
-              Text("Select date", style: AppStyles.medium16),
-              const SizedBox(height: 16),
-              const CustomCalendar(),
-              const SizedBox(height: 48),
-              Text("Select Time", style: AppStyles.medium16),
-              const SizedBox(height: 24),
-              const SelectTimeChoiceChipListView(),
-              const Flexible(child: SizedBox(height: 134)),
-              const CustomButton(textContent: "Schedule"),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                CustomAppBar(
+                  title: "Schedule Tour",
+                  widthFromBackButton: 77,
+                  textStyle: AppStyles.medium16,
+                ),
+                const SizedBox(height: 32),
+                Text("Select date", style: AppStyles.medium16),
+                const SizedBox(height: 16),
+                const CustomCalendar(),
+                const SizedBox(height: 48),
+                Text("Select Time", style: AppStyles.medium16),
+                const SizedBox(height: 24),
+                const SelectTimeChoiceChipListView(),
+                const SizedBox(height: 134),
+                const CustomButton(textContent: "Schedule"),
+              ],
+            ),
           ),
         ),
       ),
