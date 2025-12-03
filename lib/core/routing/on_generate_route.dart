@@ -18,6 +18,7 @@ import 'package:home_space/features/splash/presentation/views/splash_view.dart';
 
 import '../../features/home/presentation/views/widgets/schedule_tour_view.dart';
 import '../../features/home/presentation/views/widgets/send_enquiry_success_view.dart';
+import '../../features/home/presentation/views/widgets/share_listing_view.dart';
 
 Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
   switch (settings.name) {
@@ -74,6 +75,9 @@ Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
       );
     case ScheduleTourView.routeName:
       return MaterialPageRoute(builder: (context) => const ScheduleTourView());
+    case ShareListingView.routeName:
+      return MaterialPageRoute(builder: (context) => const ShareListingView());
+
     default:
       return null;
   }
