@@ -42,18 +42,59 @@ class _CustomCalendarState extends State<CustomCalendar> {
       ),
       child: Padding(
         padding: const EdgeInsets.all(12),
-        child: TableCalendar(
-          startingDayOfWeek: StartingDayOfWeek.sunday,
-          selectedDayPredicate: (day) => isSameDay(day, today),
-          availableGestures: AvailableGestures.none,
-          headerVisible: false,
-          // daysOfWeekVisible: false,
-          focusedDay: today,
-          firstDay: DateTime.now(),
-          lastDay: DateTime.utc(2026),
-          onDaySelected: _onDaySelected,
-          calendarStyle: buildCalendarStyle(),
-          calendarBuilders: buildCalendarBuilders(),
+        child: Column(
+          children: [
+            TableCalendar(
+              firstDay: DateTime.utc(2020, 1, 1),
+              lastDay: DateTime.utc(2030, 12, 31),
+              focusedDay: DateTime.now(),
+              headerVisible: false,
+              startingDayOfWeek: StartingDayOfWeek.sunday,
+              rowHeight: 2, // height of weekday header
+              calendarBuilders: CalendarBuilders(
+                dowBuilder: (context, day) {
+                  List<String> letters = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
+                  return Center(
+                    child: Text(
+                      letters[day.weekday % 7],
+                      style: AppStyles.bold14.copyWith(
+                        color: ColorsData.kSecondaryColor,
+                      ),
+                    ),
+                  );
+                },
+                defaultBuilder: (context, day, focusedDay) {
+                  return const SizedBox.shrink(); // hide all day cells
+                },
+                todayBuilder: (context, day, focusedDay) {
+                  return const SizedBox.shrink(); // hide today
+                },
+                selectedBuilder: (context, day, focusedDay) {
+                  return const SizedBox.shrink(); // hide selected day
+                },
+              ),
+              calendarStyle: const CalendarStyle(
+                outsideDaysVisible: false,
+                defaultTextStyle: TextStyle(color: Colors.transparent),
+                todayTextStyle: TextStyle(color: Colors.transparent),
+                selectedTextStyle: TextStyle(color: Colors.transparent),
+              ),
+            ),
+            const Divider(),
+            TableCalendar(
+              startingDayOfWeek: StartingDayOfWeek.sunday,
+              selectedDayPredicate: (day) => isSameDay(day, today),
+              availableGestures: AvailableGestures.none,
+              headerVisible: false,
+              daysOfWeekVisible: false,
+              focusedDay: today,
+              firstDay: DateTime.now(),
+              lastDay: DateTime.utc(2026),
+              onDaySelected: _onDaySelected,
+              calendarStyle: buildCalendarStyle(),
+              calendarBuilders: buildCalendarBuilders(),
+            ),
+          ],
         ),
       ),
     );
