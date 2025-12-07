@@ -106,6 +106,30 @@ class Assets {
   /// assets/images/image_2_list_tile.png
   static const String assetsImagesImage2ListTile = "assets/images/image_2_list_tile.png";
 
+  /// Assets for assetsImagesListTileImagesImage1
+  /// assets/images/list_tile_images/image1.png
+  static const String assetsImagesListTileImagesImage1 = "assets/images/list_tile_images/image1.png";
+
+  /// Assets for assetsImagesListTileImagesImage2
+  /// assets/images/list_tile_images/image2.png
+  static const String assetsImagesListTileImagesImage2 = "assets/images/list_tile_images/image2.png";
+
+  /// Assets for assetsImagesListTileImagesImage3
+  /// assets/images/list_tile_images/image3.png
+  static const String assetsImagesListTileImagesImage3 = "assets/images/list_tile_images/image3.png";
+
+  /// Assets for assetsImagesListTileImagesImage4
+  /// assets/images/list_tile_images/image4.png
+  static const String assetsImagesListTileImagesImage4 = "assets/images/list_tile_images/image4.png";
+
+  /// Assets for assetsImagesListTileImagesImage5
+  /// assets/images/list_tile_images/image5.png
+  static const String assetsImagesListTileImagesImage5 = "assets/images/list_tile_images/image5.png";
+
+  /// Assets for assetsImagesListTileImagesImage6
+  /// assets/images/list_tile_images/image6.png
+  static const String assetsImagesListTileImagesImage6 = "assets/images/list_tile_images/image6.png";
+
   /// Assets for assetsImagesListingBackgroundImage1
   /// assets/images/listing_background_image_1.png
   static const String assetsImagesListingBackgroundImage1 = "assets/images/listing_background_image_1.png";
