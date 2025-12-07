@@ -12,29 +12,29 @@ class HomeNotificationView extends StatelessWidget {
   static const routeName = "HomeNotificationView";
   static final List<ListTileModel> listTileList = [
     ListTileModel(
-      image: Assets.assetsImagesImage1ListTile,
+      leading: Assets.assetsImagesImage1ListTile,
       title: "New home for Sale",
       subtitle:
           "Discover your dream home! A stunning new property that matches your preferences just hit the market.",
     ),
     ListTileModel(
-      image: Assets.assetsImagesImage2ListTile,
+      leading: Assets.assetsImagesImage2ListTile,
       title: "Price Reduced",
       subtitle:
           "Attention homebuyers! We're excited to offer an exclusive discount sale on select properties.",
     ),
     ListTileModel(
-      image: Assets.assetsImagesDefaultImageListTile,
+      leading: Assets.assetsImagesDefaultImageListTile,
       title: "New Message",
       subtitle: "You've got a new message waiting for you!",
     ),
     ListTileModel(
-      image: Assets.assetsImagesDefaultImageListTile,
+      leading: Assets.assetsImagesDefaultImageListTile,
       title: "Your enquiry was sent",
       subtitle: "You've got a new message waiting for you!",
     ),
     ListTileModel(
-      image: Assets.assetsImagesDefaultImageListTile,
+      leading: Assets.assetsImagesDefaultImageListTile,
       title: "Your tour schedule has been confirmed",
       subtitle: "You've got a new message waiting for you!",
     ),
@@ -69,13 +69,13 @@ class HomeNotificationView extends StatelessWidget {
                         vertical: 16,
                         horizontal: 12,
                       ),
-                      leading: Image.asset(listTileList[index].image),
+                      leading: Image.asset(listTileList[index].leading!),
                       title: Text(
-                        listTileList[index].title,
+                        listTileList[index].title!,
                         style: AppStyles.regular12,
                       ),
                       subtitle: Text(
-                        listTileList[index].subtitle,
+                        listTileList[index].subtitle!,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                         style: AppStyles.regular12.copyWith(
