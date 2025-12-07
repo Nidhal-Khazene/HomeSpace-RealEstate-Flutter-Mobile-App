@@ -6,6 +6,7 @@ import 'package:home_space/features/auth/presentation/views/widgets/login_or_sig
 import 'package:home_space/features/auth/presentation/views/widgets/password_reset_link_view.dart';
 import 'package:home_space/features/auth/presentation/views/widgets/reset_password_view.dart';
 import 'package:home_space/features/auth/presentation/views/widgets/turn_on_notification_view.dart';
+import 'package:home_space/features/favourites/presentation/views/favourites_view.dart';
 import 'package:home_space/features/home/presentation/views/home_view.dart';
 import 'package:home_space/features/home/presentation/views/widgets/custom_bottom_navigation_bar.dart';
 import 'package:home_space/features/home/presentation/views/widgets/home_notification_view.dart';
@@ -77,6 +78,8 @@ Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const ScheduleTourView());
     case ShareListingView.routeName:
       return MaterialPageRoute(builder: (context) => const ShareListingView());
+    case FavouritesView.routeName:
+      return MaterialPageRoute(builder: (context) => const FavouritesView());
 
     default:
       return null;
