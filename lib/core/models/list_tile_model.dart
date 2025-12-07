@@ -1,9 +1,5 @@
 class ListTileModel {
-  String image, title, subtitle;
+  final String? leading, title, subtitle, trailing;
 
-  ListTileModel({
-    required this.image,
-    required this.title,
-    required this.subtitle,
-  });
+  ListTileModel({this.leading, this.title, this.subtitle, this.trailing});
 }
