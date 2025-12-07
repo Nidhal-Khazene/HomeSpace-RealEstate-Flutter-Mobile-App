@@ -94,6 +94,10 @@ class Assets {
   /// assets/images/icons/two_cards_icon.svg
   static const String assetsImagesIconsTwoCardsIcon = "assets/images/icons/two_cards_icon.svg";
 
+  /// Assets for assetsImagesIconsX
+  /// assets/images/icons/x.svg
+  static const String assetsImagesIconsX = "assets/images/icons/x.svg";
+
   /// Assets for assetsImagesImage1ListTile
   /// assets/images/image_1_list_tile.png
   static const String assetsImagesImage1ListTile = "assets/images/image_1_list_tile.png";
