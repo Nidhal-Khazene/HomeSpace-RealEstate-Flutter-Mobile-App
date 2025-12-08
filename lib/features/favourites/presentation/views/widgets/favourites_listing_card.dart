@@ -17,18 +17,17 @@ class FavouritesListingCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.sizeOf(context).width - kHorizontalPadding * 2;
+    double height = MediaQuery.sizeOf(context).height * 0.12;
     return Container(
-      width: MediaQuery.sizeOf(context).width - kHorizontalPadding * 2,
-      height: MediaQuery.sizeOf(context).height * 0.17,
+      width: width,
+      height: height,
       padding: const EdgeInsets.all(4),
       clipBehavior: Clip.antiAlias,
       decoration: ShapeDecoration(
-        color: Colors.white /* Bg1 */,
+        color: Colors.white,
         shape: RoundedRectangleBorder(
-          side: BorderSide(
-            width: 1,
-            color: const Color(0xFFE9E8E8) /* Stroke */,
-          ),
+          side: const BorderSide(width: 1, color: Color(0xFFE9E8E8)),
           borderRadius: BorderRadius.circular(8),
         ),
       ),
@@ -36,13 +35,10 @@ class FavouritesListingCard extends StatelessWidget {
         padding: const EdgeInsets.all(4),
         child: Row(
           children: [
-            Image.asset(
-              image,
-              height: MediaQuery.sizeOf(context).height * 0.17 - 8,
-            ),
-            SizedBox(width: 12),
+            Image.asset(image, height: height - 8),
+            const SizedBox(width: 12),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 10.5 - 4),
+              padding: const EdgeInsets.symmetric(vertical: 10.5 - 4),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
