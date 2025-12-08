@@ -5,12 +5,21 @@ import 'package:home_space/core/utils/assets.dart';
 import 'package:home_space/core/utils/styles.dart';
 import 'package:home_space/core/widgets/custom_app_bar.dart';
 import 'package:home_space/features/favourites/presentation/views/widgets/favourites_listing_card.dart';
+import 'package:iconsax_flutter/iconsax_flutter.dart';
 
-class FavouritesListTileItemDetails extends StatelessWidget {
+class FavouritesListTileItemDetails extends StatefulWidget {
   const FavouritesListTileItemDetails({super.key});
 
   static const String routeName = "FavouritesListTileItemDetails";
-  static final List<ListingCardModel> listingCardList = [
+
+  @override
+  State<FavouritesListTileItemDetails> createState() =>
+      _FavouritesListTileItemDetailsState();
+}
+
+class _FavouritesListTileItemDetailsState
+    extends State<FavouritesListTileItemDetails> {
+  List<ListingCardModel> listingCardList = [
     ListingCardModel(
       title: "2715 Ash Dr. San Jose, South Dakota 83475",
       image: Assets.assetsImagesListTileImagesImage1,
@@ -59,12 +68,37 @@ class FavouritesListTileItemDetails extends StatelessWidget {
                 ),
                 const SizedBox(height: 24),
                 Column(
+                  spacing: 12,
                   children: List.generate(
                     listingCardList.length,
-                    (index) => FavouritesListingCard(
-                      title: listingCardList[index].title!,
-                      image: listingCardList[index].image!,
-                      price: listingCardList[index].price!,
+                    (index) => Dismissible(
+                      background: Container(
+                        decoration: ShapeDecoration(
+                          color: const Color(0xFFEE3455),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
+                        child: const Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Icon(Iconsax.trash_copy, color: Colors.white),
+                            SizedBox(width: 12),
+                          ],
+                        ),
+                      ),
+                      direction: DismissDirection.endToStart,
+                      onDismissed: (DismissDirection direction) {
+                        setState(() {
+                          listingCardList.removeAt(index);
+                        });
+                      },
+                      key: ValueKey(listingCardList[index].title),
+                      child: FavouritesListingCard(
+                        title: listingCardList[index].title!,
+                        image: listingCardList[index].image!,
+                        price: listingCardList[index].price!,
+                      ),
                     ),
                   ),
                 ),

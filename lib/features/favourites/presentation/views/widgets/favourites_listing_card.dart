@@ -28,7 +28,7 @@ class FavouritesListingCard extends StatelessWidget {
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
-          side: const BorderSide(width: 1, color: Color(0xFFE9E8E8)),
+          side: BorderSide(width: 1, color: Color(0xFFE9E8E8)),
           borderRadius: BorderRadius.circular(8),
         ),
       ),
@@ -56,7 +56,9 @@ class FavouritesListingCard extends StatelessWidget {
                     child: Text(title, style: AppStyles.regular12),
                   ),
                   const SizedBox(height: 4),
-                  Expanded(child: ListingCardPropertiesRow(sizeProperty: 12)),
+                  const Expanded(
+                    child: ListingCardPropertiesRow(sizeProperty: 12),
+                  ),
                 ],
               ),
             ),
