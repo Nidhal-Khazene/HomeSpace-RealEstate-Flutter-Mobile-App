@@ -7,15 +7,18 @@ class ListingCardPropertyWithValue extends StatelessWidget {
     super.key,
     required this.property,
     required this.value,
+    this.height,
+    this.width,
   });
   final String property;
   final String value;
+  final double? height, width;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SvgPicture.asset(property),
+        SvgPicture.asset(property, height: height, width: width),
         const SizedBox(width: 4),
         Text(value, style: AppStyles.regular12),
       ],
