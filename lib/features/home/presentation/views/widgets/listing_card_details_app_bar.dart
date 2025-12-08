@@ -35,7 +35,7 @@ class _ListingCardDetailsAppBarState extends State<ListingCardDetailsAppBar> {
               isLoved = !isLoved;
             });
             if (isLoved) {
-              showSnackBar(context);
+              showSnackBar(context, message: "Saved to Favourites");
             }
           },
           height: 40,

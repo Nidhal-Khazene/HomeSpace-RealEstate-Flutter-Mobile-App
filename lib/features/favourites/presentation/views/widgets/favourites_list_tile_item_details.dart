@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:home_space/constants.dart';
+import 'package:home_space/core/functions/show_snack_bar.dart';
 import 'package:home_space/core/models/listing_card_model.dart';
 import 'package:home_space/core/utils/assets.dart';
 import 'package:home_space/core/utils/styles.dart';
@@ -91,6 +92,7 @@ class _FavouritesListTileItemDetailsState
                       onDismissed: (DismissDirection direction) {
                         setState(() {
                           listingCardList.removeAt(index);
+                          showSnackBar(context, message: "Listing was deleted");
                         });
                       },
                       key: ValueKey(listingCardList[index].title),
