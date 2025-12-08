@@ -49,20 +49,27 @@ class FavouritesListTileItemDetails extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: kPrimaryScreenPadding,
-          child: Column(
-            children: [
-              CustomAppBar(
-                title: "Apartment in Uk",
-                textStyle: AppStyles.medium16,
-                widthFromBackButton: 68,
-              ),
-              const SizedBox(height: 24),
-              FavouritesListingCard(
-                title: listingCardList[0].title!,
-                image: listingCardList[0].image!,
-                price: listingCardList[0].price!,
-              ),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                CustomAppBar(
+                  title: "Apartment in Uk",
+                  textStyle: AppStyles.medium16,
+                  widthFromBackButton: 68,
+                ),
+                const SizedBox(height: 24),
+                Column(
+                  children: List.generate(
+                    listingCardList.length,
+                    (index) => FavouritesListingCard(
+                      title: listingCardList[index].title!,
+                      image: listingCardList[index].image!,
+                      price: listingCardList[index].price!,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

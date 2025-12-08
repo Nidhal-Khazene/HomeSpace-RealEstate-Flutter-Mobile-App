@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/core/utils/styles.dart';
+import 'package:home_space/features/home/presentation/views/widgets/Listing_card_properties_row.dart';
 
 import '../../../../../constants.dart';
 
@@ -55,6 +56,7 @@ class FavouritesListingCard extends StatelessWidget {
                     child: Text(title, style: AppStyles.regular12),
                   ),
                   const SizedBox(height: 4),
+                  Expanded(child: ListingCardPropertiesRow(sizeProperty: 12)),
                 ],
               ),
             ),
