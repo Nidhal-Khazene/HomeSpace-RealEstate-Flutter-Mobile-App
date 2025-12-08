@@ -6,7 +6,7 @@ import '../utils/assets.dart';
 import '../utils/colors.dart';
 import '../utils/styles.dart';
 
-void showSnackBar(BuildContext context) {
+void showSnackBar(BuildContext context, {required String message}) {
   ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(
       elevation: 0,
@@ -16,7 +16,7 @@ void showSnackBar(BuildContext context) {
           SvgPicture.asset(Assets.assetsImagesTrueCircleContainer),
           const SizedBox(width: 12),
           Text(
-            "Saved to favourites",
+            message,
             style: AppStyles.regular12.copyWith(
               color: ColorsData.kFontPrimaryColor,
             ),
