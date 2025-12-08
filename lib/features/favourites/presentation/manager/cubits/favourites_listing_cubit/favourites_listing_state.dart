@@ -7,7 +7,11 @@ final class FavouritesListingInitial extends FavouritesListingState {}
 
 final class FavouritesListingLoading extends FavouritesListingState {}
 
-final class FavouritesListingFailure extends FavouritesListingState {}
+final class FavouritesListingFailure extends FavouritesListingState {
+  final String errMessage;
+
+  FavouritesListingFailure({required this.errMessage});
+}
 
 final class FavouritesListingSuccess extends FavouritesListingState {
   final List<ListingCardModel> listingCardList;
