@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/features/auth/presentation/views/widgets/login_or_sign_up_password.dart';
 
 import '../../../../../core/utils/assets.dart';
@@ -26,7 +27,7 @@ class LoginOrSignUpView extends StatelessWidget {
               Navigator.pushNamed(context, LoginOrSignUpPassword.routeName);
             },
             textContent: "Continue",
-            colorBackground: const Color(0xff4460F6),
+            colorBackground: ColorsData.kPrimaryColor,
           ),
           const SizedBox(height: 95),
           const CustomSocialMediaButton(
