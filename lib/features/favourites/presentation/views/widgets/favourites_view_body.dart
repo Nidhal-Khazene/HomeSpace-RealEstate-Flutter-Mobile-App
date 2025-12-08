@@ -57,7 +57,14 @@ class FavouritesViewBody extends StatelessWidget {
                                       "Create New List",
                                       style: AppStyles.bold16,
                                     ),
-                                    SvgPicture.asset(Assets.assetsImagesIconsX),
+                                    GestureDetector(
+                                      onTap: () {
+                                        Navigator.pop(context);
+                                      },
+                                      child: SvgPicture.asset(
+                                        Assets.assetsImagesIconsX,
+                                      ),
+                                    ),
                                   ],
                                 ),
                                 const SizedBox(height: 32),
