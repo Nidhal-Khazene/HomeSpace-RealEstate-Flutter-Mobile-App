@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:home_space/core/utils/assets.dart';
 import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/features/favourites/presentation/views/favourites_view.dart';
+import 'package:home_space/features/settings/presentation/views/settings_view.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 import '../home_view.dart';
@@ -23,7 +24,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
     HomeView(),
     FavouritesView(),
     HomeView(),
-    HomeView(),
+    SettingsView(),
   ];
 
   @override
