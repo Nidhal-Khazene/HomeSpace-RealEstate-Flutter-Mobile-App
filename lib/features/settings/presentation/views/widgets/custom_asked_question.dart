@@ -6,7 +6,13 @@ import '../../../../../core/utils/colors.dart';
 import '../../../../../core/utils/styles.dart';
 
 class CustomAskedQuestion extends StatefulWidget {
-  const CustomAskedQuestion({super.key});
+  const CustomAskedQuestion({
+    super.key,
+    required this.title,
+    required this.subtitle,
+  });
+  final String title;
+  final String subtitle;
 
   @override
   State<CustomAskedQuestion> createState() => _CustomAskedQuestionState();
@@ -32,10 +38,7 @@ class _CustomAskedQuestionState extends State<CustomAskedQuestion> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  "Can Homespace sell my property",
-                  style: AppStyles.regular12,
-                ),
+                Text(widget.title, style: AppStyles.regular12),
                 Transform.rotate(
                   angle: -math.pi / 2,
                   child: GestureDetector(
@@ -44,7 +47,10 @@ class _CustomAskedQuestionState extends State<CustomAskedQuestion> {
                         isVisible = !isVisible;
                       });
                     },
-                    child: Icon(Icons.arrow_back_ios_new_rounded, size: 20),
+                    child: const Icon(
+                      Icons.arrow_back_ios_new_rounded,
+                      size: 20,
+                    ),
                   ),
                 ),
               ],
@@ -54,10 +60,7 @@ class _CustomAskedQuestionState extends State<CustomAskedQuestion> {
               child: Column(
                 children: [
                   const SizedBox(height: 24),
-                  Text(
-                    "Yes, Homespace can definitely help you sell your property. They have a strong network and marketing strategies to attract potential buyers. Their agents will assist you with pricing, staging, marketing, and negotiations to ensure a smooth and successful sale.",
-                    style: AppStyles.regular12,
-                  ),
+                  Text(widget.subtitle, style: AppStyles.regular12),
                 ],
               ),
             ),
