@@ -22,6 +22,7 @@ import '../../features/favourites/presentation/views/widgets/favourites_list_til
 import '../../features/home/presentation/views/widgets/schedule_tour_view.dart';
 import '../../features/home/presentation/views/widgets/send_enquiry_success_view.dart';
 import '../../features/home/presentation/views/widgets/share_listing_view.dart';
+import '../../features/settings/presentation/views/settings_view.dart';
 
 Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
   switch (settings.name) {
@@ -90,6 +91,8 @@ Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (context) => const NoListingOnYourWishlistYet(),
       );
+    case SettingsView.routeName:
+      return MaterialPageRoute(builder: (context) => const SettingsView());
     default:
       return null;
   }
