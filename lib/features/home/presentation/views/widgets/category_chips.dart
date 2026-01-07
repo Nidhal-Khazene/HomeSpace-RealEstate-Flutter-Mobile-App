@@ -44,14 +44,14 @@ class _CategoryChipsState extends State<CategoryChips> {
               });
             },
             backgroundColor: Colors.transparent,
-            selectedColor: ColorsData.kSecondaryColor,
+            selectedColor: ColorsData.kMediumPrimaryColor,
             labelStyle: AppStyles.regular12.copyWith(
               color: isSelected ? Colors.white : ColorsData.kFontSecondaryColor,
             ),
             shape: RoundedRectangleBorder(
               side: BorderSide(
                 color: isSelected
-                    ? ColorsData.kSecondaryColor
+                    ? ColorsData.kMediumPrimaryColor
                     : ColorsData.kBorderColor,
               ),
               borderRadius: BorderRadius.circular(33),

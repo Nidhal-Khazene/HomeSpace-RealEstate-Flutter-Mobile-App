@@ -58,7 +58,7 @@ class _CustomCalendarState extends State<CustomCalendar> {
                     child: Text(
                       letters[day.weekday % 7],
                       style: AppStyles.bold14.copyWith(
-                        color: ColorsData.kSecondaryColor,
+                        color: ColorsData.kMediumPrimaryColor,
                       ),
                     ),
                   );
@@ -107,7 +107,9 @@ class _CustomCalendarState extends State<CustomCalendar> {
         return Center(
           child: Text(
             letters[day.weekday % 7],
-            style: AppStyles.bold16.copyWith(color: ColorsData.kSecondaryColor),
+            style: AppStyles.bold16.copyWith(
+              color: ColorsData.kMediumPrimaryColor,
+            ),
           ),
         );
       },
@@ -119,7 +121,7 @@ class _CustomCalendarState extends State<CustomCalendar> {
             child: Text(
               '${day.day}',
               style: AppStyles.regular16.copyWith(
-                color: ColorsData.kSecondaryColor,
+                color: ColorsData.kMediumPrimaryColor,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -139,7 +141,7 @@ class _CustomCalendarState extends State<CustomCalendar> {
           child: Text(
             '${day.day}',
             style: AppStyles.medium16.copyWith(
-              color: ColorsData.kSecondaryColor,
+              color: ColorsData.kMediumPrimaryColor,
             ),
           ),
         );
@@ -148,7 +150,7 @@ class _CustomCalendarState extends State<CustomCalendar> {
       selectedBuilder: (context, day, focusedDay) {
         return Container(
           decoration: BoxDecoration(
-            color: ColorsData.kSecondaryColor,
+            color: ColorsData.kMediumPrimaryColor,
             shape: BoxShape.circle,
           ),
           alignment: Alignment.center,

@@ -9,6 +9,7 @@ import 'package:home_space/core/widgets/custom_button.dart';
 import 'package:home_space/core/widgets/custom_text_field.dart';
 import 'package:home_space/features/favourites/presentation/views/widgets/favourites_list_tile_item.dart';
 import 'package:home_space/features/favourites/presentation/views/widgets/favourites_list_tile_item_details.dart';
+import 'package:home_space/features/favourites/presentation/views/widgets/no_listing_on_your_whishlist_yet.dart';
 
 class FavouritesViewBody extends StatelessWidget {
   const FavouritesViewBody({super.key});
@@ -74,7 +75,8 @@ class FavouritesViewBody extends StatelessWidget {
                                 const SizedBox(height: 32),
                                 CustomButton(
                                   textContent: "Create",
-                                  colorBackground: ColorsData.kSecondaryColor,
+                                  colorBackground:
+                                      ColorsData.kMediumPrimaryColor,
                                 ),
                               ],
                             ),
@@ -93,7 +95,7 @@ class FavouritesViewBody extends StatelessWidget {
                 child: Text(
                   "New List",
                   style: AppStyles.medium16.copyWith(
-                    color: ColorsData.kSecondaryColor,
+                    color: ColorsData.kMediumPrimaryColor,
                   ),
                 ),
               ),
@@ -106,10 +108,17 @@ class FavouritesViewBody extends StatelessWidget {
               4,
               (index) => FavouritesListTileItem(
                 onTap: () {
-                  Navigator.pushNamed(
-                    context,
-                    FavouritesListTileItemDetails.routeName,
-                  );
+                  if (index == 0) {
+                    Navigator.pushNamed(
+                      context,
+                      FavouritesListTileItemDetails.routeName,
+                    );
+                  } else {
+                    Navigator.pushNamed(
+                      context,
+                      NoListingOnYourWishlistYet.routeName,
+                    );
+                  }
                 },
                 title: list[index].title!,
                 subtitle: list[index].subtitle!,

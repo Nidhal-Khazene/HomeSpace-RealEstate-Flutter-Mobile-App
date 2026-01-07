@@ -65,7 +65,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                     Iconsax.home_2_copy,
                     size: 20,
                     color: _selectedIndex == 0
-                        ? ColorsData.kSecondaryColor
+                        ? ColorsData.kMediumPrimaryColor
                         : ColorsData.kFontPrimaryColor,
                   ),
                 ),
@@ -77,7 +77,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                     Assets.assetsImagesIconsHeartBlackOutlinedIcon,
                     colorFilter: ColorFilter.mode(
                       _selectedIndex == 1
-                          ? ColorsData.kSecondaryColor
+                          ? ColorsData.kMediumPrimaryColor
                           : ColorsData.kFontPrimaryColor,
                       BlendMode.srcIn,
                     ),
@@ -91,7 +91,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                     Assets.assetsImagesIconsMessageminus,
                     colorFilter: ColorFilter.mode(
                       _selectedIndex == 2
-                          ? ColorsData.kSecondaryColor
+                          ? ColorsData.kMediumPrimaryColor
                           : ColorsData.kFontPrimaryColor,
                       BlendMode.srcIn,
                     ),
@@ -105,7 +105,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
                     Iconsax.setting_2_copy,
                     size: 20,
                     color: _selectedIndex == 3
-                        ? ColorsData.kSecondaryColor
+                        ? ColorsData.kMediumPrimaryColor
                         : ColorsData.kFontPrimaryColor,
                   ),
                 ),

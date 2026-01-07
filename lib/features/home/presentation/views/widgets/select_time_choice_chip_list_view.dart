@@ -50,12 +50,12 @@ class _SelectTimeChoiceChipListViewState
               });
             },
             backgroundColor: Colors.transparent,
-            selectedColor: ColorsData.kSecondaryColor,
+            selectedColor: ColorsData.kMediumPrimaryColor,
             labelStyle: AppStyles.regular12.copyWith(
-              color: isSelected ? Colors.white : ColorsData.kSecondaryColor,
+              color: isSelected ? Colors.white : ColorsData.kMediumPrimaryColor,
             ),
             shape: RoundedRectangleBorder(
-              side: BorderSide(color: ColorsData.kSecondaryColor),
+              side: BorderSide(color: ColorsData.kMediumPrimaryColor),
               borderRadius: BorderRadius.circular(33),
             ),
           );

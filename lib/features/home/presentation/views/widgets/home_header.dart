@@ -27,7 +27,7 @@ class HomeHeader extends StatelessWidget {
           width: 40,
           height: 40,
           widget: SvgPicture.asset(Assets.assetsImagesIconsNotificationIcon),
-          colorBackground: Colors.transparent,
+          backgroundColor: Colors.transparent,
           borderColor: ColorsData.kBorderColor,
         ),
       ],

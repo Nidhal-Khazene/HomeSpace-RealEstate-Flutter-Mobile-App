@@ -23,7 +23,7 @@ class ListingCardDetailsPersonalListTile extends StatelessWidget {
       title: Text("Robert daniel", style: AppStyles.regular16),
       trailing: CustomOvalContainer(
         borderColor: Colors.transparent,
-        colorBackground: ColorsData.kSecondaryColor,
+        backgroundColor: ColorsData.kMediumPrimaryColor,
         width: 40,
         height: 40,
         widget: const Icon(Iconsax.call_copy, color: Colors.white, size: 20),

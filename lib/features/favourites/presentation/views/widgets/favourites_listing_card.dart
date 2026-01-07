@@ -46,7 +46,7 @@ class FavouritesListingCard extends StatelessWidget {
                   Text(
                     "\$$price/Week",
                     style: AppStyles.medium12.copyWith(
-                      color: ColorsData.kSecondaryColor,
+                      color: ColorsData.kMediumPrimaryColor,
                     ),
                   ),
                   const SizedBox(height: 4),

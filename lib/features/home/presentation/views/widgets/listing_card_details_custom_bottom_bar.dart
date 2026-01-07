@@ -43,7 +43,7 @@ class ListingCardDetailsCustomBottomBar extends StatelessWidget {
                 width: 117,
                 textContent: "Send enquiry",
                 textStyle: AppStyles.regular12.copyWith(color: Colors.white),
-                colorBackground: ColorsData.kSecondaryColor,
+                colorBackground: ColorsData.kMediumPrimaryColor,
               ),
               GestureDetector(
                 onTap: () async {

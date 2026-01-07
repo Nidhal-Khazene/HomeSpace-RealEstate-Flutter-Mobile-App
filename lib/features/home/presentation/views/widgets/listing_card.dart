@@ -83,7 +83,7 @@ class _ListingCardState extends State<ListingCard> {
                     Text(
                       r"$450/Week",
                       style: AppStyles.medium12.copyWith(
-                        color: ColorsData.kSecondaryColor,
+                        color: ColorsData.kMediumPrimaryColor,
                       ),
                     ),
                     const SizedBox(height: 17),

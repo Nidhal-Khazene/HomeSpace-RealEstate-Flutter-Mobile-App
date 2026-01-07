@@ -22,7 +22,7 @@ class ListingCardDetailsCustomBottomSheetListTile extends StatelessWidget {
       ),
       leading: Icon(
         Iconsax.calendar_1_copy,
-        color: ColorsData.kSecondaryColor,
+        color: ColorsData.kMediumPrimaryColor,
         size: 20,
       ),
       title: Text(title, style: AppStyles.regular16),

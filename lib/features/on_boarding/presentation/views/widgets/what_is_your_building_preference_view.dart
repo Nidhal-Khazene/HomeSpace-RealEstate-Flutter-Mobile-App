@@ -56,10 +56,10 @@ class _WhatIsYourBuildingPreferenceViewState
                         ? Colors.white
                         : ColorsData.kFontSecondaryColor,
                     backgroundColor: isActive
-                        ? ColorsData.kSecondaryColor
+                        ? ColorsData.kMediumPrimaryColor
                         : Colors.transparent,
                     borderColor: isActive
-                        ? ColorsData.kSecondaryColor
+                        ? ColorsData.kMediumPrimaryColor
                         : ColorsData.kBorderColor,
                   ),
                 );
@@ -114,8 +114,8 @@ class _WhatIsYourBuildingPreferenceViewState
                     },
                     child: CustomCircleContainer(
                       widget: SvgPicture.asset(Assets.assetsImagesIconsMinus),
-                      backgroundColor: ColorsData.kSecondaryColor,
-                      borderColor: ColorsData.kSecondaryColor,
+                      backgroundColor: ColorsData.kMediumPrimaryColor,
+                      borderColor: ColorsData.kMediumPrimaryColor,
                     ),
                   ),
                   const SizedBox(width: 12),
@@ -133,8 +133,8 @@ class _WhatIsYourBuildingPreferenceViewState
                     },
                     child: CustomCircleContainer(
                       widget: SvgPicture.asset(Assets.assetsImagesIconsAdd),
-                      backgroundColor: ColorsData.kSecondaryColor,
-                      borderColor: ColorsData.kSecondaryColor,
+                      backgroundColor: ColorsData.kMediumPrimaryColor,
+                      borderColor: ColorsData.kMediumPrimaryColor,
                     ),
                   ),
                 ],
@@ -159,8 +159,8 @@ class _WhatIsYourBuildingPreferenceViewState
                     },
                     child: CustomCircleContainer(
                       widget: SvgPicture.asset(Assets.assetsImagesIconsMinus),
-                      backgroundColor: ColorsData.kSecondaryColor,
-                      borderColor: ColorsData.kSecondaryColor,
+                      backgroundColor: ColorsData.kMediumPrimaryColor,
+                      borderColor: ColorsData.kMediumPrimaryColor,
                     ),
                   ),
                   const SizedBox(width: 12),
@@ -178,8 +178,8 @@ class _WhatIsYourBuildingPreferenceViewState
                     },
                     child: CustomCircleContainer(
                       widget: SvgPicture.asset(Assets.assetsImagesIconsAdd),
-                      backgroundColor: ColorsData.kSecondaryColor,
-                      borderColor: ColorsData.kSecondaryColor,
+                      backgroundColor: ColorsData.kMediumPrimaryColor,
+                      borderColor: ColorsData.kMediumPrimaryColor,
                     ),
                   ),
                 ],

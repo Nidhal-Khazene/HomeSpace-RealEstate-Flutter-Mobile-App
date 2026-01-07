@@ -40,7 +40,7 @@ class _ListingCardDetailsAppBarState extends State<ListingCardDetailsAppBar> {
           },
           height: 40,
           width: 40,
-          colorBackground: Colors.transparent,
+          backgroundColor: Colors.transparent,
           borderColor: ColorsData.kBorderColor,
           widget: isLoved
               ? const Icon(Iconsax.heart, color: Colors.red)

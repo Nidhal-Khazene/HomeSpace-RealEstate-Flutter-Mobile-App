@@ -6,7 +6,7 @@ import '../utils/styles.dart';
 class CustomOvalContainer extends StatelessWidget {
   const CustomOvalContainer({
     super.key,
-    this.colorBackground,
+    this.backgroundColor,
     this.textContent,
     this.textContentColor,
     this.borderColor,
@@ -15,7 +15,7 @@ class CustomOvalContainer extends StatelessWidget {
     this.width,
     this.height,
   });
-  final Color? colorBackground;
+  final Color? backgroundColor;
   final String? textContent;
   final Color? textContentColor;
   final Color? borderColor;
@@ -32,10 +32,12 @@ class CustomOvalContainer extends StatelessWidget {
         height: width ?? 100,
         width: height ?? 100,
         decoration: ShapeDecoration(
-          color: colorBackground ?? ColorsData.kSecondaryColor,
+          color: backgroundColor ?? ColorsData.kMediumPrimaryColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(100),
-            side: BorderSide(color: borderColor ?? ColorsData.kSecondaryColor),
+            side: BorderSide(
+              color: borderColor ?? ColorsData.kMediumPrimaryColor,
+            ),
           ),
         ),
         child: Center(

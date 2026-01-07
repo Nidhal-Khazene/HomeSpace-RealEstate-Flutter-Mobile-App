@@ -47,8 +47,10 @@ class _WhatAreYouLookingForViewState extends State<WhatAreYouLookingForView> {
                   });
                 },
                 textContent: e,
-                textContentColor: !isActive ? ColorsData.kSecondaryColor : null,
-                colorBackground: !isActive ? Colors.transparent : null,
+                textContentColor: !isActive
+                    ? ColorsData.kMediumPrimaryColor
+                    : null,
+                backgroundColor: !isActive ? Colors.transparent : null,
               );
             }).toList(),
           ),
