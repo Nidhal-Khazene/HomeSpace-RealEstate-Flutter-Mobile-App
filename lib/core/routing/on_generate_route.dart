@@ -23,6 +23,7 @@ import '../../features/home/presentation/views/widgets/schedule_tour_view.dart';
 import '../../features/home/presentation/views/widgets/send_enquiry_success_view.dart';
 import '../../features/home/presentation/views/widgets/share_listing_view.dart';
 import '../../features/settings/presentation/views/settings_view.dart';
+import '../../features/settings/presentation/views/widgets/help_center.dart';
 
 Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
   switch (settings.name) {
@@ -93,6 +94,8 @@ Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
       );
     case SettingsView.routeName:
       return MaterialPageRoute(builder: (context) => const SettingsView());
+    case HelpCenter.routeName:
+      return MaterialPageRoute(builder: (context) => const HelpCenter());
     default:
       return null;
   }
