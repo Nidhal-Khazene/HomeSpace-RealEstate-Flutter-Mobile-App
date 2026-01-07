@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:home_space/core/models/list_tile_model.dart';
 import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/core/utils/styles.dart';
+import 'package:home_space/features/settings/presentation/views/widgets/help_center.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class SettingsViewBody extends StatelessWidget {
@@ -63,17 +64,24 @@ class SettingsViewBody extends StatelessWidget {
             list.length,
             (index) => Padding(
               padding: const EdgeInsets.only(bottom: 12),
-              child: ListTile(
-                shape: RoundedRectangleBorder(
-                  side: BorderSide(color: ColorsData.kBorderColor),
-                  borderRadius: BorderRadius.circular(8),
+              child: GestureDetector(
+                onTap: () {
+                  if (index == 3) {
+                    Navigator.pushNamed(context, HelpCenter.routeName);
+                  }
+                },
+                child: ListTile(
+                  shape: RoundedRectangleBorder(
+                    side: BorderSide(color: ColorsData.kBorderColor),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  leading: CircleAvatar(
+                    backgroundColor: ColorsData.kLightPrimaryColor,
+                    child: list[index].leadingWidget,
+                  ),
+                  title: Text(list[index].title!, style: AppStyles.regular14),
+                  trailing: const Icon(Icons.arrow_forward_ios, size: 10),
                 ),
-                leading: CircleAvatar(
-                  backgroundColor: ColorsData.kLightPrimaryColor,
-                  child: list[index].leadingWidget,
-                ),
-                title: Text(list[index].title!, style: AppStyles.regular14),
-                trailing: const Icon(Icons.arrow_forward_ios, size: 10),
               ),
             ),
           ),
