@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:home_space/constants.dart';
 import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/core/utils/styles.dart';
+import 'package:home_space/core/widgets/custom_button.dart';
 import 'package:home_space/core/widgets/custom_oval_container.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
@@ -31,10 +32,27 @@ class NoListingOnYourWishlistYet extends StatelessWidget {
                     size: 64,
                   ),
                 ),
-                SizedBox(height: 32),
-                Text(
-                  "No listing on your wishlist yet",
-                  style: AppStyles.medium32,
+                const SizedBox(height: 32),
+                SizedBox(
+                  width:
+                      MediaQuery.sizeOf(context).width -
+                      (59 - kHorizontalPadding * 2),
+                  child: Text(
+                    'No listing on your wishlist yet',
+                    textAlign: TextAlign.center,
+                    style: AppStyles.medium24,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                CustomButton(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  borderColor: Colors.transparent,
+                  colorBackground: ColorsData.kMediumPrimaryColor,
+                  width: 163,
+                  textContent: "Explore listing",
+                  textStyle: AppStyles.regular12.copyWith(color: Colors.white),
                 ),
               ],
             ),
