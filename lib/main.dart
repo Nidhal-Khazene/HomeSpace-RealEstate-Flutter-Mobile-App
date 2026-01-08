@@ -3,7 +3,7 @@ import 'package:home_space/constants.dart';
 import 'package:home_space/core/routing/on_generate_route.dart';
 import 'package:home_space/core/services/shared_preferences_singleton.dart';
 import 'package:home_space/core/utils/colors.dart';
-import 'package:home_space/features/auth/presentation/views/widgets/turn_on_notification_view.dart';
+import 'package:home_space/features/settings/presentation/views/widgets/mortgage_calculator_form.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,7 +29,7 @@ class HomeSpace extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoutes,
-      initialRoute: TurnOnNotification.routeName,
+      initialRoute: MortgageCalculatorForm.routeName,
     );
   }
 }
