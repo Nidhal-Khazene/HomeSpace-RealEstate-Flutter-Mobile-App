@@ -4,6 +4,7 @@ import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/core/utils/styles.dart';
 import 'package:home_space/features/settings/presentation/views/widgets/edit_profile.dart';
 import 'package:home_space/features/settings/presentation/views/widgets/help_center.dart';
+import 'package:home_space/features/settings/presentation/views/widgets/mortgage_calculator_form.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class SettingsViewBody extends StatelessWidget {
@@ -67,11 +68,17 @@ class SettingsViewBody extends StatelessWidget {
               padding: const EdgeInsets.only(bottom: 12),
               child: GestureDetector(
                 onTap: () {
-                  if (index == 3) {
-                    Navigator.pushNamed(context, HelpCenter.routeName);
-                  }
                   if (index == 0) {
                     Navigator.pushNamed(context, EditProfile.routeName);
+                  }
+                  if (index == 1) {
+                    Navigator.pushNamed(
+                      context,
+                      MortgageCalculatorForm.routeName,
+                    );
+                  }
+                  if (index == 3) {
+                    Navigator.pushNamed(context, HelpCenter.routeName);
                   }
                 },
                 child: ListTile(

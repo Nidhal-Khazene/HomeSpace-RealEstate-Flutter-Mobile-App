@@ -16,6 +16,7 @@ import 'package:home_space/features/home/presentation/views/widgets/listing_card
 import 'package:home_space/features/home/presentation/views/widgets/send_enquiry_view.dart';
 import 'package:home_space/features/on_boarding/presentation/views/on_boarding_view.dart';
 import 'package:home_space/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
+import 'package:home_space/features/settings/presentation/views/widgets/mortgage_calculator_form.dart';
 import 'package:home_space/features/splash/presentation/views/splash_view.dart';
 
 import '../../features/favourites/presentation/views/widgets/favourites_list_tile_item_details.dart';
@@ -99,6 +100,10 @@ Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
       return MaterialPageRoute(builder: (context) => const HelpCenter());
     case EditProfile.routeName:
       return MaterialPageRoute(builder: (context) => const EditProfile());
+    case MortgageCalculatorForm.routeName:
+      return MaterialPageRoute(
+        builder: (context) => const MortgageCalculatorForm(),
+      );
     default:
       return null;
   }
