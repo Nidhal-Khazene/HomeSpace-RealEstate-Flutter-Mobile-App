@@ -30,7 +30,7 @@ class EditProfile extends StatelessWidget {
               CustomTextField(textContent: "Last Name"),
               SizedBox(height: 12),
               CustomTextField(textContent: "Email Address"),
-              SizedBox(height: 205),
+              Flexible(child: SizedBox(height: 205)),
               CustomButton(textContent: "Save"),
             ],
           ),
