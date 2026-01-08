@@ -75,7 +75,7 @@ class FavouritesViewBody extends StatelessWidget {
                                 const SizedBox(height: 32),
                                 CustomButton(
                                   textContent: "Create",
-                                  colorBackground:
+                                  backgroundColor:
                                       ColorsData.kMediumPrimaryColor,
                                 ),
                               ],

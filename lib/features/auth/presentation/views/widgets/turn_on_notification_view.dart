@@ -55,7 +55,7 @@ class TurnOnNotification extends StatelessWidget {
                 borderColor: ColorsData.kPrimaryColor,
                 textContentColor: ColorsData.kPrimaryColor,
                 textContent: "Skip",
-                colorBackground: Colors.transparent,
+                backgroundColor: Colors.transparent,
               ),
             ],
           ),

@@ -67,7 +67,7 @@ class _ResetPasswordViewState extends State<ResetPasswordView> {
                 borderColor: readyToContinue
                     ? ColorsData.kPrimaryColor
                     : Colors.transparent,
-                colorBackground: readyToContinue
+                backgroundColor: readyToContinue
                     ? ColorsData.kPrimaryColor
                     : ColorsData.kNotReadyButtonColor,
               ),

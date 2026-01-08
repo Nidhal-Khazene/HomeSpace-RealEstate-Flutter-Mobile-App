@@ -49,7 +49,7 @@ class NoListingOnYourWishlistYet extends StatelessWidget {
                     Navigator.pop(context);
                   },
                   borderColor: Colors.transparent,
-                  colorBackground: ColorsData.kMediumPrimaryColor,
+                  backgroundColor: ColorsData.kMediumPrimaryColor,
                   width: 163,
                   textContent: "Explore listing",
                   textStyle: AppStyles.regular12.copyWith(color: Colors.white),

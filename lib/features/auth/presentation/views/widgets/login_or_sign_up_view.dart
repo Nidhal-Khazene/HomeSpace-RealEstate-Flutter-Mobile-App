@@ -27,7 +27,7 @@ class LoginOrSignUpView extends StatelessWidget {
               Navigator.pushNamed(context, LoginOrSignUpPassword.routeName);
             },
             textContent: "Continue",
-            colorBackground: ColorsData.kPrimaryColor,
+            backgroundColor: ColorsData.kPrimaryColor,
           ),
           const SizedBox(height: 95),
           const CustomSocialMediaButton(

@@ -82,7 +82,7 @@ class _FinishSignUpViewBodyState extends State<FinishSignUpViewBody> {
                   ? ColorsData.kPrimaryColor
                   : Colors.transparent,
               textContent: "Agree and Continue",
-              colorBackground: readyToContinue
+              backgroundColor: readyToContinue
                   ? ColorsData.kPrimaryColor
                   : ColorsData.kNotReadyButtonColor,
               onTap: readyToContinue

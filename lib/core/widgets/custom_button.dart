@@ -5,7 +5,7 @@ import 'package:home_space/core/utils/styles.dart';
 class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
-    this.colorBackground,
+    this.backgroundColor,
     required this.textContent,
     this.textContentColor,
     this.borderColor,
@@ -15,7 +15,7 @@ class CustomButton extends StatelessWidget {
     this.verticalPadding,
     this.textStyle,
   });
-  final Color? colorBackground;
+  final Color? backgroundColor;
   final String textContent;
   final Color? textContentColor;
   final Color? borderColor;
@@ -35,7 +35,7 @@ class CustomButton extends StatelessWidget {
         decoration: BoxDecoration(
           border: Border.all(color: borderColor ?? ColorsData.kPrimaryColor),
           borderRadius: BorderRadius.circular(100),
-          color: colorBackground ?? ColorsData.kPrimaryColor,
+          color: backgroundColor ?? ColorsData.kMediumPrimaryColor,
         ),
         child: Center(
           child: Text(

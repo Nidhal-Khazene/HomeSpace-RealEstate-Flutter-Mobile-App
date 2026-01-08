@@ -56,7 +56,7 @@ class OnBoardingInitialPage extends StatelessWidget {
               );
             },
             textContent: 'Get Started',
-            colorBackground: const Color(0xff4360f6),
+            backgroundColor: const Color(0xff4360f6),
           ),
         ],
       ),
