@@ -3,7 +3,7 @@ import 'package:home_space/constants.dart';
 import 'package:home_space/core/routing/on_generate_route.dart';
 import 'package:home_space/core/services/shared_preferences_singleton.dart';
 import 'package:home_space/core/utils/colors.dart';
-import 'package:home_space/features/settings/presentation/views/widgets/mortgage_calculator_form.dart';
+import 'package:home_space/features/settings/presentation/views/widgets/monthly_payment_breakdown_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,7 +29,7 @@ class HomeSpace extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoutes,
-      initialRoute: MortgageCalculatorForm.routeName,
+      initialRoute: MonthlyPaymentBreakdownView.routeName,
     );
   }
 }

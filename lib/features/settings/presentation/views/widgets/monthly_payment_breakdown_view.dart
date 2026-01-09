@@ -20,6 +20,7 @@ class MonthlyPaymentBreakdownView extends StatelessWidget {
               const CustomAppBar(title: ""),
               const SizedBox(height: 53),
               Text("Monthy Payment Breakdown", style: AppStyles.bold16),
+              const SizedBox(height: 40),
               const PieChartView(),
             ],
           ),
