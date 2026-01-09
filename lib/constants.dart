@@ -10,3 +10,5 @@ const EdgeInsetsGeometry kPrimaryScreenPadding = EdgeInsets.only(
 const double kBottomPadding = 32;
 const int kMillisecondsDuration = 300;
 const String kIsOnBoardingViewSeen = "isOnBoardingViewSeen";
+const double kNormalRadiusChart = 30;
+const double kTouchedRadiusChart = 40;
