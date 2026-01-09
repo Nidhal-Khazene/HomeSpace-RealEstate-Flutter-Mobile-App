@@ -4,14 +4,14 @@ import 'package:home_space/constants.dart';
 import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/core/utils/styles.dart';
 
-class PieChartView extends StatefulWidget {
-  const PieChartView({super.key});
+class PaymentChartView extends StatefulWidget {
+  const PaymentChartView({super.key});
 
   @override
-  State<PieChartView> createState() => _PieChartViewState();
+  State<PaymentChartView> createState() => _PaymentChartViewState();
 }
 
-class _PieChartViewState extends State<PieChartView> {
+class _PaymentChartViewState extends State<PaymentChartView> {
   int currentSectionIndex = -1;
 
   @override
