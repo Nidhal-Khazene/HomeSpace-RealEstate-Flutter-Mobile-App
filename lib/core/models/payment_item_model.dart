@@ -2,7 +2,8 @@ import 'dart:ui';
 
 class PaymentItemModel {
   final Color color;
-  final String title, price;
+  final String title;
+  final double price;
 
   PaymentItemModel({
     required this.color,
