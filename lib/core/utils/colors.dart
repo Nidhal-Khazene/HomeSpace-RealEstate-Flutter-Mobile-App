@@ -9,3 +9,10 @@ abstract class ColorsData {
   static final Color kFontSecondaryColor = const Color(0xFF8C8B8B);
   static final Color kBorderColor = const Color(0xFFE9E8E8);
 }
+
+abstract class PieChartColorsData {
+  static final Color systemPurple = const Color(0xFF9747FF);
+  static final Color systemBlackRed = ColorsData.kMediumPrimaryColor;
+  static final Color systemGreen = const Color(0xFF66DD96);
+  static final Color systemYellow = const Color(0xFFD3DD66);
+}
