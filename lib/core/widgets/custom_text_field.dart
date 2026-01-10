@@ -8,17 +8,19 @@ class CustomTextField extends StatelessWidget {
     this.textContentColor,
     this.onChanged,
     this.maxLines,
+    this.textInputType,
   });
   final String textContent;
   final Color? textContentColor;
   final void Function(String?)? onChanged;
   final int? maxLines;
+  final TextInputType? textInputType;
   @override
   Widget build(BuildContext context) {
     return TextField(
       maxLines: maxLines,
       onChanged: onChanged,
-      keyboardType: TextInputType.emailAddress,
+      keyboardType: textInputType ?? TextInputType.emailAddress,
       decoration: InputDecoration(
         hintText: textContent,
         hintStyle: AppStyles.regular16.copyWith(
