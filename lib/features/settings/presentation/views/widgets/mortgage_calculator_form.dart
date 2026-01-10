@@ -31,26 +31,31 @@ class _MortgageCalculatorFormState extends State<MortgageCalculatorForm> {
                 const CustomAppBar(title: "Mortgage Calculator"),
                 const SizedBox(height: 16),
                 CustomTextField(
+                  textInputType: TextInputType.number,
                   textContent: "Home Price",
                   onChanged: (data) => onChangedLogic(data, 'homePrice'),
                 ),
                 const SizedBox(height: 12),
                 CustomTextField(
+                  textInputType: TextInputType.number,
                   textContent: "Down payment",
                   onChanged: (data) => onChangedLogic(data, 'downPayment'),
                 ),
                 const SizedBox(height: 12),
                 CustomTextField(
+                  textInputType: TextInputType.number,
                   textContent: "Loan term",
                   onChanged: (data) => onChangedLogic(data, 'loanTerm'),
                 ),
                 const SizedBox(height: 12),
                 CustomTextField(
+                  textInputType: TextInputType.number,
                   textContent: "Interest Rate",
                   onChanged: (data) => onChangedLogic(data, 'interestRate'),
                 ),
                 const SizedBox(height: 12),
                 CustomTextField(
+                  textInputType: TextInputType.number,
                   textContent: "Zip code",
                   onChanged: (data) => onChangedLogic(data, 'zipCode'),
                 ),
