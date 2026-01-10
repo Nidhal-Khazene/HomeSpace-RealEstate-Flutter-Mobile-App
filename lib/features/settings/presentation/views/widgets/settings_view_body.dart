@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:home_space/core/models/list_tile_model.dart';
 import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/core/utils/styles.dart';
+import 'package:home_space/features/settings/presentation/views/widgets/contact_support_view.dart';
 import 'package:home_space/features/settings/presentation/views/widgets/edit_profile.dart';
 import 'package:home_space/features/settings/presentation/views/widgets/help_center.dart';
 import 'package:home_space/features/settings/presentation/views/widgets/mortgage_calculator_form.dart';
@@ -79,6 +80,9 @@ class SettingsViewBody extends StatelessWidget {
                   }
                   if (index == 3) {
                     Navigator.pushNamed(context, HelpCenter.routeName);
+                  }
+                  if (index == 4) {
+                    Navigator.pushNamed(context, ContactSupportView.routeName);
                   }
                 },
                 child: ListTile(
