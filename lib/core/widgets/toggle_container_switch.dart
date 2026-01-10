@@ -20,7 +20,7 @@ class _ToggleContainerSwitchState extends State<ToggleContainerSwitch> {
         });
       },
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: 900),
         curve: Curves.ease,
         width: 40,
         height: 24,
