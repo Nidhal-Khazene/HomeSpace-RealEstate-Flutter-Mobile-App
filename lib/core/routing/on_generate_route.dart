@@ -18,6 +18,7 @@ import 'package:home_space/features/on_boarding/presentation/views/on_boarding_v
 import 'package:home_space/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 import 'package:home_space/features/settings/presentation/views/widgets/monthly_payment_breakdown_view.dart';
 import 'package:home_space/features/settings/presentation/views/widgets/mortgage_calculator_form.dart';
+import 'package:home_space/features/settings/presentation/views/widgets/settings_notifications_view.dart';
 import 'package:home_space/features/splash/presentation/views/splash_view.dart';
 
 import '../../features/favourites/presentation/views/widgets/favourites_list_tile_item_details.dart';
@@ -113,6 +114,10 @@ Route<dynamic>? onGenerateRoutes(RouteSettings settings) {
     case ContactSupportView.routeName:
       return MaterialPageRoute(
         builder: (context) => const ContactSupportView(),
+      );
+    case SettingsNotificationsView.routeName:
+      return MaterialPageRoute(
+        builder: (context) => const SettingsNotificationsView(),
       );
     default:
       return null;

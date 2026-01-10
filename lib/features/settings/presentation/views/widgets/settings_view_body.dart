@@ -6,6 +6,7 @@ import 'package:home_space/features/settings/presentation/views/widgets/contact_
 import 'package:home_space/features/settings/presentation/views/widgets/edit_profile.dart';
 import 'package:home_space/features/settings/presentation/views/widgets/help_center.dart';
 import 'package:home_space/features/settings/presentation/views/widgets/mortgage_calculator_form.dart';
+import 'package:home_space/features/settings/presentation/views/widgets/settings_notifications_view.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 import '../../../../../core/functions/build_list_tile_border.dart';
@@ -78,6 +79,12 @@ class SettingsViewBody extends StatelessWidget {
                     Navigator.pushNamed(
                       context,
                       MortgageCalculatorForm.routeName,
+                    );
+                  }
+                  if (index == 2) {
+                    Navigator.pushNamed(
+                      context,
+                      SettingsNotificationsView.routeName,
                     );
                   }
                   if (index == 3) {
