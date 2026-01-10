@@ -8,6 +8,8 @@ import 'package:home_space/features/settings/presentation/views/widgets/help_cen
 import 'package:home_space/features/settings/presentation/views/widgets/mortgage_calculator_form.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
+import '../../../../../core/functions/build_list_tile_border.dart';
+
 class SettingsViewBody extends StatelessWidget {
   const SettingsViewBody({super.key});
 
@@ -86,10 +88,7 @@ class SettingsViewBody extends StatelessWidget {
                   }
                 },
                 child: ListTile(
-                  shape: RoundedRectangleBorder(
-                    side: BorderSide(color: ColorsData.kBorderColor),
-                    borderRadius: BorderRadius.circular(8),
-                  ),
+                  shape: buildListTileRoundedRectangleBorder(),
                   leading: CircleAvatar(
                     backgroundColor: ColorsData.kLightPrimaryColor,
                     child: list[index].leadingWidget,
