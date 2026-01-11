@@ -154,6 +154,14 @@ class Assets {
   /// assets/images/personal_image_2.png
   static const String assetsImagesPersonalImage2 = "assets/images/personal_image_2.png";
 
+  /// Assets for assetsImagesPersonalImage3
+  /// assets/images/personal_image_3.png
+  static const String assetsImagesPersonalImage3 = "assets/images/personal_image_3.png";
+
+  /// Assets for assetsImagesPersonalImage4
+  /// assets/images/personal_image_4.png
+  static const String assetsImagesPersonalImage4 = "assets/images/personal_image_4.png";
+
   /// Assets for assetsImagesSplashLogo
   /// assets/images/splash_logo.png
   static const String assetsImagesSplashLogo = "assets/images/splash_logo.png";
