@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:home_space/core/utils/assets.dart';
 import 'package:home_space/core/utils/colors.dart';
+import 'package:home_space/features/chats/presentation/views/chats_view.dart';
 import 'package:home_space/features/favourites/presentation/views/favourites_view.dart';
 import 'package:home_space/features/settings/presentation/views/settings_view.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
@@ -23,7 +24,7 @@ class _CustomBottomNavigationBarState extends State<CustomBottomNavigationBar> {
   final List<Widget> screens = const [
     HomeView(),
     FavouritesView(),
-    HomeView(),
+    ChatsView(),
     SettingsView(),
   ];
 
