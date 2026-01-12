@@ -4,6 +4,7 @@ import 'package:home_space/core/utils/assets.dart';
 import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/core/utils/styles.dart';
 import 'package:home_space/core/widgets/custom_circle_container.dart';
+import 'package:home_space/features/chats/presentation/views/widgets/chat_room_view.dart';
 
 class ChatsViewBody extends StatelessWidget {
   const ChatsViewBody({super.key});
@@ -28,32 +29,41 @@ class ChatsViewBody extends StatelessWidget {
             spacing: 12,
             children: List.generate(
               imagesList.length,
-              (index) => ListTile(
-                contentPadding: const EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 16,
-                ),
-                minTileHeight: 32,
-                isThreeLine: true,
-                shape: buildListTileRoundedRectangleBorder(),
-                leading: CustomCircleContainer(
-                  backgroundColor: Colors.transparent,
-                  borderColor: Colors.transparent,
-                  widget: imagesList[index],
-                ),
-                title: Text("Robert daniel", style: AppStyles.regular12),
-                subtitle: Text(
-                  'I will send you more listings for you to check out..how about that ?',
-                  overflow: TextOverflow.ellipsis,
-                  maxLines: 1,
-                  style: AppStyles.regular12.copyWith(
-                    color: ColorsData.kFontSecondaryColor,
+              (index) => GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(
+                    context,
+                    ChatRoomView.routeName,
+                    arguments: imagesList[index].image,
+                  );
+                },
+                child: ListTile(
+                  contentPadding: const EdgeInsets.symmetric(
+                    horizontal: 12,
+                    vertical: 16,
                   ),
-                ),
-                trailing: Text(
-                  "10:24AM",
-                  style: AppStyles.regular12.copyWith(
-                    color: ColorsData.kMediumPrimaryColor,
+                  minTileHeight: 32,
+                  isThreeLine: true,
+                  shape: buildListTileRoundedRectangleBorder(),
+                  leading: CustomCircleContainer(
+                    backgroundColor: Colors.transparent,
+                    borderColor: Colors.transparent,
+                    widget: imagesList[index],
+                  ),
+                  title: Text("Robert daniel", style: AppStyles.regular12),
+                  subtitle: Text(
+                    'I will send you more listings for you to check out..how about that ?',
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 1,
+                    style: AppStyles.regular12.copyWith(
+                      color: ColorsData.kFontSecondaryColor,
+                    ),
+                  ),
+                  trailing: Text(
+                    "10:24AM",
+                    style: AppStyles.regular12.copyWith(
+                      color: ColorsData.kMediumPrimaryColor,
+                    ),
                   ),
                 ),
               ),
