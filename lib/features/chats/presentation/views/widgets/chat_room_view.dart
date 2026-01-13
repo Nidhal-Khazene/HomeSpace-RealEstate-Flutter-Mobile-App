@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:home_space/constants.dart';
 import 'package:home_space/core/utils/styles.dart';
 import 'package:home_space/core/widgets/custom_app_bar.dart';
+import 'package:home_space/features/chats/presentation/views/widgets/chats_message_bar.dart';
 
 class ChatRoomView extends StatelessWidget {
   const ChatRoomView({super.key});
@@ -22,6 +23,8 @@ class ChatRoomView extends StatelessWidget {
                 textStyle: AppStyles.medium16,
                 profileImageWidget: Image(image: profileImage),
               ),
+              const SizedBox(height: 32),
+              ChatsMessageBar(),
             ],
           ),
         ),
