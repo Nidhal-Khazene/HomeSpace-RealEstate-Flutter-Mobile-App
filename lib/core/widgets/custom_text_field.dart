@@ -9,12 +9,16 @@ class CustomTextField extends StatelessWidget {
     this.onChanged,
     this.maxLines,
     this.textInputType,
+    this.borderRadiusValue,
+    this.hintStyle,
   });
   final String textContent;
   final Color? textContentColor;
   final void Function(String?)? onChanged;
   final int? maxLines;
   final TextInputType? textInputType;
+  final double? borderRadiusValue;
+  final TextStyle? hintStyle;
   @override
   Widget build(BuildContext context) {
     return TextField(
@@ -23,9 +27,11 @@ class CustomTextField extends StatelessWidget {
       keyboardType: textInputType ?? TextInputType.emailAddress,
       decoration: InputDecoration(
         hintText: textContent,
-        hintStyle: AppStyles.regular16.copyWith(
-          color: textContentColor ?? const Color(0xFF8C8B8B),
-        ),
+        hintStyle:
+            hintStyle ??
+            AppStyles.regular16.copyWith(
+              color: textContentColor ?? const Color(0xFF8C8B8B),
+            ),
         enabledBorder: buildOutlineInputBorder(),
         focusedBorder: buildOutlineInputBorder(),
         disabledBorder: buildOutlineInputBorder(),
@@ -35,7 +41,7 @@ class CustomTextField extends StatelessWidget {
 
   OutlineInputBorder buildOutlineInputBorder() {
     return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(4),
+      borderRadius: BorderRadius.circular(borderRadiusValue ?? 4),
       borderSide: const BorderSide(width: 1, color: Color(0xFFE9E8E8)),
     );
   }
