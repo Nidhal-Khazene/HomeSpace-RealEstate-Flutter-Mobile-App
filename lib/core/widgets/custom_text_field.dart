@@ -11,6 +11,7 @@ class CustomTextField extends StatelessWidget {
     this.textInputType,
     this.borderRadiusValue,
     this.hintStyle,
+    this.contentPadding,
   });
   final String textContent;
   final Color? textContentColor;
@@ -19,6 +20,7 @@ class CustomTextField extends StatelessWidget {
   final TextInputType? textInputType;
   final double? borderRadiusValue;
   final TextStyle? hintStyle;
+  final EdgeInsetsGeometry? contentPadding;
   @override
   Widget build(BuildContext context) {
     return TextField(
@@ -26,6 +28,7 @@ class CustomTextField extends StatelessWidget {
       onChanged: onChanged,
       keyboardType: textInputType ?? TextInputType.emailAddress,
       decoration: InputDecoration(
+        contentPadding: contentPadding,
         hintText: textContent,
         hintStyle:
             hintStyle ??
