@@ -6,6 +6,7 @@ import 'package:home_space/features/chats/presentation/views/widgets/chats_messa
 
 class ChatRoomView extends StatelessWidget {
   const ChatRoomView({super.key});
+
   static const routeName = "ChatRoomView";
 
   @override
@@ -17,14 +18,14 @@ class ChatRoomView extends StatelessWidget {
         child: Padding(
           padding: kPrimaryScreenPadding,
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               CustomAppBar(
                 title: "Robert daniel",
                 textStyle: AppStyles.medium16,
                 profileImageWidget: Image(image: profileImage),
               ),
-              const SizedBox(height: 32),
-              ChatsMessageBar(),
+              const ChatsMessageBar(),
             ],
           ),
         ),

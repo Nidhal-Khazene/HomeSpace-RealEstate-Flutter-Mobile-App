@@ -9,35 +9,38 @@ class ChatsMessageBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Row(
-        children: [
-          Expanded(
-            child: SizedBox(
-              height: 40,
-              child: CustomTextField(
-                hintStyle: AppStyles.regular12.copyWith(
-                  color: ColorsData.kFontSecondaryColor,
+    return Column(
+      children: [
+        Row(
+          children: [
+            Expanded(
+              child: SizedBox(
+                height: 40,
+                child: CustomTextField(
+                  hintStyle: AppStyles.regular12.copyWith(
+                    color: ColorsData.kFontSecondaryColor,
+                  ),
+                  textContent: "Write Message",
+                  borderRadiusValue: 100,
                 ),
-                textContent: "Write Message",
-                borderRadiusValue: 100,
               ),
             ),
-          ),
-          const SizedBox(width: 11),
-          CustomOvalContainer(
-            height: 40,
-            width: 40,
-            widget: Icon(
-              Icons.add,
-              color: ColorsData.kMediumPrimaryColor,
-              size: 20,
+            const SizedBox(width: 11),
+            CustomOvalContainer(
+              height: 40,
+              width: 40,
+              widget: Icon(
+                Icons.add,
+                color: ColorsData.kMediumPrimaryColor,
+                size: 20,
+              ),
+              borderColor: ColorsData.kBorderColor,
+              backgroundColor: Colors.transparent,
             ),
-            borderColor: ColorsData.kBorderColor,
-            backgroundColor: Colors.transparent,
-          ),
-        ],
-      ),
+          ],
+        ),
+        const SizedBox(height: 61),
+      ],
     );
   }
 }
