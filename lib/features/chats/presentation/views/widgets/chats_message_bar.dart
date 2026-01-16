@@ -1,17 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:home_space/core/utils/colors.dart';
 import 'package:home_space/core/utils/styles.dart';
-import 'package:home_space/core/widgets/custom_oval_container.dart';
+import 'package:home_space/core/widgets/custom_add_media.dart';
 import 'package:home_space/core/widgets/custom_text_field.dart';
 
-class ChatsMessageBar extends StatelessWidget {
+class ChatsMessageBar extends StatefulWidget {
   const ChatsMessageBar({super.key});
 
+  @override
+  State<ChatsMessageBar> createState() => _ChatsMessageBarState();
+}
+
+class _ChatsMessageBarState extends State<ChatsMessageBar> {
+  bool isAddingMediaActive = false;
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Expanded(
               child: SizedBox(
@@ -26,16 +33,13 @@ class ChatsMessageBar extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 11),
-            CustomOvalContainer(
-              height: 40,
-              width: 40,
-              widget: Icon(
-                Icons.add,
-                color: ColorsData.kMediumPrimaryColor,
-                size: 20,
-              ),
-              borderColor: ColorsData.kBorderColor,
-              backgroundColor: Colors.transparent,
+            GestureDetector(
+              onTap: () {
+                setState(() {
+                  isAddingMediaActive = !isAddingMediaActive;
+                });
+              },
+              child: CustomAddMedia(isActive: isAddingMediaActive),
             ),
           ],
         ),
