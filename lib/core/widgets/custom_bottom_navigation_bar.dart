@@ -7,7 +7,7 @@ import 'package:home_space/features/favourites/presentation/views/favourites_vie
 import 'package:home_space/features/settings/presentation/views/settings_view.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
-import '../home_view.dart';
+import '../../features/home/presentation/views/home_view.dart';
 
 class CustomBottomNavigationBar extends StatefulWidget {
   const CustomBottomNavigationBar({super.key});
